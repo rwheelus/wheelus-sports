@@ -8,43 +8,83 @@
         /* Make logo full width */
         .logo {
             width: 100%;
-            max-height: 200px; /* optional: limit height */
+            max-height: 200px;
             object-fit: contain;
         }
-        /* Center heading and paragraph */
         h1 {
             text-align: center;
         }
         p {
             text-align: center;
-            max-width: 800px; /* optional: restrict line length */
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.6; /* add space between lines */
+            line-height: 1.6;
         }
         nav {
             text-align: center;
             margin-top: 20px;
+        }
+        /* Sections for sports */
+        .sports-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .sports-section h2 {
+            margin-bottom: 15px;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+        .links-grid a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <!-- Logo -->
     <img src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo" class="logo">
-    
+
     <!-- Centered Welcome heading -->
     <h1>Welcome!</h1>
-    
-    <!-- Centered body text with line breaks -->
+
+    <!-- Centered body text -->
     <p>
 Hi!<br><br>
 Welcome to my site documenting my computer algorithm rankings/ratings of teams across various sports. Right now I have College Football, College Basketball, NFL, and NBA. I do my best to update the various rankings the day after most games have been played for the week. While my ratings generate fairly quickly, and with the press of a button, I must still generate the web pages manually. Given that, and being a busy person, I sometimes fall a little bit behind.<br><br>
 My interest in sports data science and computer algorithms really started during the summer of 2018, when, in my free time, I produced an algorithm to rank all 130 FBS teams. I tested this algorithm using the entirety of the 2017 college football season, and tweaked during the live 2018 season to achieve more accurate results. On the FAQ page, you can read about how the College Football algorithm works and my reasoning behind my metrics.<br><br>
-This is now a test to confirm that the new python script successfully updates this page.
 </p>
-    
-    <!-- Navigation -->
-    <nav>
-        <a href="college-football-2025-2026.html">College Football Ranking 2025-2026</a>
-    </nav>
+
+    <!-- Navigation: placeholder sections for sports -->
+    <div class="sports-section">
+        <h2>College Football</h2>
+        <div class="links-grid">
+            <a href="college-football-2025-2026.html">2025-2026</a>
+            <a href="#">2024-2025</a>
+            <a href="#">2023-2024</a>
+        </div>
+    </div>
+
+    <div class="sports-section">
+        <h2>NFL</h2>
+        <div class="links-grid">
+            <a href="#">2025</a>
+            <a href="#">2024</a>
+            <a href="#">2023</a>
+        </div>
+    </div>
+
+    <div class="sports-section">
+        <h2>College Men's Basketball</h2>
+        <div class="links-grid">
+            <a href="#">2025-2026</a>
+            <a href="#">2024-2025</a>
+            <a href="#">2023-2024</a>
+        </div>
+    </div>
 </body>
 </html>
