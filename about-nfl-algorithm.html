@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About the NFL Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefefe;
+            color: #222;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        a.home-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            color: #0073e6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a.home-link:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <img src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo" class="logo">
+
+    <!-- Return link -->
+    <a href="index.html" class="home-link">← Return to Homepage</a>
+
+    <!-- Title -->
+    <div class="container">
+        <h1>About the NFL Algorithm</h1>
+
+        <p>In sports rankings, a <strong>Ranking Violation</strong> describes a situation where a team is ranked ahead of a team to whom they lost. I first came across this term on Ken Massey’s site, where on the legacy college football ranking composite, each rating system was scored on closeness to the composite as well as by “ranking violation.” For example, if the Baltimore Ravens beat the Cleveland Browns, but a ranking system puts Cleveland on top of Baltimore, that would be a ranking violation.</p>
+
+        <p>Such situations are unavoidable. It is common, for example, for Divisional rivals to split results during the season and go 1-1 against each other. Even more likely are larger loops wherein Team A beat Team B who beat Team C who beat Team A. So, does A go above B above C? What about the fact that C beat A? Naturally, some ranking violations are unavoidable, but it is an interesting academic exercise to see the teams ranked in an order that tries to maximize adherence to the binary win/loss result.</p>
+
+        <p>There are multiple “solutions” to the minimization of ranking violations problem. The easiest way to picture this is if two adjacent teams in the ranking did not play one another, there is no impact on the number of total ranking violations for swapping the order of the two teams. More complex shuffling allows for an often wide range of solution sets that can see teams as high as (e.g.) 3 or as low as (e.g.) 20 (this is the case for the 2024 Los Angeles Rams).</p>
+
+        <p><strong>My code seeks to optimize in two stages:</strong></p>
+        <ol>
+            <li>Find solutions with the minimum number of ranking violations</li>
+            <li>From within that solution set, identify the order of teams which preferentially puts teams with the most “Transitive Wins” at the top. (Transitive wins are the sum of wins by teams that a team has beat.)</li>
+        </ol>
+
+        <h2>How should you interpret the results?</h2>
+        <p>It should be noted that just because one team beat another does not inherently mean they are the better team. As such, it’s not really a rating system that uses any advanced metrics to describe relative performance or game quality between teams. This system is also in no way predictive: it only describes past results. The engine also treats all games equally: there is no difference between a week 1 game and the Super Bowl.</p>
+
+        <p>It’s really just a fun way to look at resume rankings in just about their most pure form, and there’s a sort of beautiful simplicity to it: if you win, the engine will do its best to put you in front of everyone you beat, without putting you in front of anyone you lost to.</p>
+
+        <h2>Output Table Fields</h2>
+        <ul>
+            <li><strong>Rank:</strong> The team’s actual ranking</li>
+            <li><strong>Team:</strong> The team’s name</li>
+            <li><strong>Wins, Losses, Draws:</strong> The team’s record</li>
+            <li><strong>Best Rank:</strong> The highest a team ranked across all solution sets with the same number of final ranking violations as the published result</li>
+            <li><strong>Worst Rank:</strong> The lowest a team ranked across that same solution set</li>
+            <li><strong>Transitive Wins:</strong> The number of wins across the teams that team beat</li>
+        </ul>
+
+        <p style="text-align:center; margin-top: 40px; font-size: 0.9em; color: #555;">
+            Last Updated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+        </p>
+    </div>
+
+</body>
+</html>
