@@ -1,201 +1,244 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXB4LT3YBN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXB4LT3YBN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-MXB4LT3YBN');
+        </script>
+        <meta charset="UTF-8">
+        <title>Welcome</title>
+        <style>
+            /* Make logo full width */
+            .logo {
+                width: 100%;
+                max-height: 200px;
+                object-fit: contain;
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+            nav {
+                text-align: center;
+                margin-top: 20px;
+            }
+            /* Sections for sports */
+            .sports-section {
+                text-align: center;
+                margin-top: 40px;
+            }
+            .sports-section h2 {
+                margin-bottom: 15px;
+            }
+            .links-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 15px;
+                justify-items: center;
+            }
+            .links-grid a {
+                text-decoration: none;
+                color: #0073e6;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Logo -->
+        <img src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo" class="logo">
     
-      gtag('config', 'G-MXB4LT3YBN');
-    </script>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-    <style>
-        /* Make logo full width */
-        .logo {
-            width: 100%;
-            max-height: 200px;
-            object-fit: contain;
-        }
-        h1 {
-            text-align: center;
-        }
-        p {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        /* Sections for sports */
-        .sports-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .sports-section h2 {
-            margin-bottom: 15px;
-        }
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            justify-items: center;
-        }
-        .links-grid a {
-            text-decoration: none;
-            color: #0073e6;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <!-- Logo -->
-    <img src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo" class="logo">
-
-    <!-- Centered Welcome heading -->
-    <h1>Welcome!</h1>
-
-    <!-- Centered body text -->
-    <p>
-Hi!<br><br>
-Welcome to my site documenting my computer algorithm rankings/ratings of teams across various sports. Right now I have College Football, College Basketball, NFL, and NBA. I do my best to update the various rankings the day after most games have been played for the week. While my ratings generate fairly quickly, and with the press of a button, I must still prompt page generation manually. Given that, and being a busy person who travels often, I may sometimes fall a little bit behind.<br><br>
-My interest in sports data science and computer algorithms really started during the summer of 2018, when, in my free time, I produced an algorithm to rank all 130 College Football FBS teams. I tested this algorithm using the entirety of the 2017 college football season, and tweaked during the live 2018 season to achieve more accurate results.<br><br>
-This site is currently a work in progress. I am migrating from my former wordpress site to GitHub due to the easier long-term maintenance. In the process, I am tweaking some algorithms and adding additional sports and leagues.<br><br>
-
-<h2 style="text-align:center;">Let Me Know You're Here!</h2>
-<p style="text-align:center;">
-I use Google Analytics to track page views—just as a fun way to see traffic to my site.<br>
-Disabling Ad Blockers lets me accurately see traffic numbers.<br>
-I don't make any money or do anything with the data. It just makes me happy to see people visit.
-</p>
-</p>
-
-    <!-- Navigation: placeholder sections for sports -->
-    <div class="sports-section">
-        <h2>College Football</h2>
-        <div class="links-grid">
-            <a href="college-football-2025-26.html">2025-26</a>
-            <a href="college-football-2024-25.html">2024-25</a>
-            <a href="college-football-2023-24.html">2023-24</a>
-        </div>
-    </div>
-
-    <div class="sports-section">
-        <h2>NFL</h2>
-        <div style="text-align: center; margin-bottom: 10px;">
-            (<a href="about-nfl-algorithm.html" class="about-link">About</a>)
-        </div>
-        <div class="links-grid">
-            <a href="NFL-2025-26.html">2025-26</a>
-            <a href="NFL-2024-25.html">2024-25</a>
-            <a href="NFL-2023-24.html">2023-24</a>
-            <a href="NFL-2022-23.html">2022-23</a>
-            <a href="NFL-2021-22.html">2021-22</a>
-            <a href="NFL-2020-21.html">2020-21</a>
-            <a href="NFL-2019-20.html">2019-20</a>
-            <a href="NFL-2018-19.html">2018-19</a>
-            <a href="NFL-2017-18.html">2017-18</a>
-            <a href="NFL-2016-17.html">2016-17</a>
-            <a href="NFL-2015-16.html">2015-16</a>
-            <a href="NFL-2014-15.html">2014-15</a>
-            <a href="NFL-2013-14.html">2013-14</a>
-            <a href="NFL-2012-13.html">2012-13</a>
-            <a href="NFL-2011-12.html">2011-12</a>
-            <a href="NFL-2010-11.html">2010-11</a>
-            <a href="NFL-2009-10.html">2009-10</a>
-            <a href="NFL-2008-09.html">2008-09</a>
-            <a href="NFL-2007-08.html">2007-08</a>
-            <a href="NFL-2006-07.html">2006-07</a>
-            <a href="NFL-2005-06.html">2005-06</a>
-            <a href="NFL-2004-05.html">2004-05</a>
-            <a href="NFL-2003-04.html">2003-04</a>
-            <a href="NFL-2002-03.html">2002-03</a>
-            <a href="NFL-2001-02.html">2001-02</a>
-            <a href="NFL-2000-01.html">2000-01</a>
-            <a href="NFL-1999-00.html">1999-00</a>
-            <a href="NFL-1998-99.html">1998-99</a>
-            <a href="NFL-1997-98.html">1997-98</a>
-            <a href="NFL-1996-97.html">1996-97</a>
-            <a href="NFL-1995-96.html">1995-96</a>
-            <a href="NFL-1994-95.html">1994-95</a>
-            <a href="NFL-1993-94.html">1993-94</a>
-            <a href="NFL-1992-93.html">1992-93</a>
-            <a href="NFL-1991-92.html">1991-92</a>
-            <a href="NFL-1990-91.html">1990-91</a>
-        </div>
-    </div>
-
-    <div class="sports-section">
-        <h2>College Men's Basketball</h2>
-        <div class="links-grid">
-            <a href="#">2025-26</a>
-            <a href="NCAAM-2024-25.html">2024-25</a>
-            <a href="NCAAM-2023-24.html">2023-24</a>
-            <a href="NCAAM-2022-23.html">2022-23</a>
-            <a href="NCAAM-2021-22.html">2021-22</a>
-            <a href="NCAAM-2020-21.html">2020-21</a>
-            <a href="NCAAM-2019-20.html">2019-20</a>
-            <a href="#">2018-19</a>
-            <a href="#">2017-18</a>
-            <a href="#">2016-17</a>
-            <a href="#">2015-16</a>
-            <a href="NCAAM-2014-15.html">2014-15</a>
-            <a href="#">2013-14</a>
-            <a href="NCAAM-2012-13.html">2012-13</a>
-            <a href="#">2011-12</a>
-            <a href="NCAAM-2010-11.html">2010-11</a>
-            <a href="NCAAM-2009-10.html">2009-10</a>
-            <a href="NCAAM-2008-09.html">2008-09</a>
-            <a href="NCAAM-2007-08.html">2007-08</a>
-        </div>
-    </div>
+        <!-- Centered Welcome heading -->
+        <h1>Welcome!</h1>
     
-    <div class="sports-section">
-        <h2>NBA</h2>
-        <div class="links-grid">
-            <a href="NBA-2025-26.html">2025-26</a>
-            <a href="NBA-2024-25.html">2024-25</a>
-            <a href="NBA-2023-24.html">2023-24</a>
-            <a href="NBA-2022-23.html">2022-23</a>
-            <a href="NBA-2021-22.html">2021-22</a>
-            <a href="NBA-2020-21.html">2020-21</a>
-            <a href="NBA-2019-20.html">2019-20</a>
-            <a href="NBA-2018-19.html">2018-19</a>
-            <a href="NBA-2017-18.html">2017-18</a>
-            <a href="NBA-2016-17.html">2016-17</a>
-            <a href="NBA-2015-16.html">2015-16</a>
-            <a href="NBA-2014-15.html">2014-15</a>
-            <a href="NBA-2013-14.html">2013-14</a>
-            <a href="NBA-2012-13.html">2012-13</a>
-            <a href="NBA-2011-12.html">2011-12</a>
-            <a href="NBA-2010-11.html">2010-11</a>
-            <a href="NBA-2009-10.html">2009-10</a>
-            <a href="NBA-2008-09.html">2008-09</a>
-            <a href="NBA-2007-08.html">2007-08</a>
-            <a href="NBA-2006-07.html">2006-07</a>
-            <a href="NBA-2005-06.html">2005-06</a>
-            <a href="NBA-2004-05.html">2004-05</a>
-            <a href="NBA-2003-04.html">2003-04</a>
-            <a href="NBA-2002-03.html">2002-03</a>
-            <a href="NBA-2001-02.html">2001-02</a>
-            <a href="NBA-2000-01.html">2000-01</a>
-            <a href="NBA-1999-00.html">1999-00</a>
-            <a href="NBA-1998-99.html">1998-99</a>
-            <a href="NBA-1997-98.html">1997-98</a>
-            <a href="NBA-1996-97.html">1996-97</a>
-            <a href="NBA-1995-96.html">1995-96</a>
-            <a href="NBA-1994-95.html">1994-95</a>
-            <a href="NBA-1993-94.html">1993-94</a>
-            <a href="NBA-1992-93.html">1992-93</a>
-            <a href="NBA-1991-92.html">1991-92</a>
-            <a href="NBA-1990-91.html">1990-91</a>
+        <!-- Centered body text -->
+        <p>
+    Hi!<br><br>
+    Welcome to my site documenting my computer algorithm rankings/ratings of teams across various sports. Right now I have College Football, College Basketball, NFL, and NBA. I do my best to update the various rankings the day after most games have been played for the week. While my ratings generate fairly quickly, and with the press of a button, I must still prompt page generation manually. Given that, and being a busy person who travels often, I may sometimes fall a little bit behind.<br><br>
+    My interest in sports data science and computer algorithms really started during the summer of 2018, when, in my free time, I produced an algorithm to rank all 130 College Football FBS teams. I tested this algorithm using the entirety of the 2017 college football season, and tweaked during the live 2018 season to achieve more accurate results.<br><br>
+    This site is currently a work in progress. I am migrating from my former wordpress site to GitHub due to the easier long-term maintenance. In the process, I am tweaking some algorithms and adding additional sports and leagues.<br><br>
+    
+    <h2 style="text-align:center;">Let Me Know You're Here!</h2>
+    <p style="text-align:center;">
+    I use Google Analytics to track page views—just as a fun way to see traffic to my site.<br>
+    Disabling Ad Blockers lets me accurately see traffic numbers.<br>
+    I don't make any money or do anything with the data. It just makes me happy to see people visit.
+    </p>
+    </p>
+    
+        <!-- Navigation: placeholder sections for sports -->
+        <div class="sports-section">
+            <h2>College Football</h2>
+            <div class="links-grid">
+                <a href="college-football-2025-26.html">2025-26</a>
+                <a href="college-football-2024-25.html">2024-25</a>
+                <a href="college-football-2023-24.html">2023-24</a>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+    
+        <div class="sports-section">
+            <h2>NFL</h2>
+            <div style="text-align: center; margin-bottom: 10px;">
+                (<a href="about-nfl-algorithm.html" class="about-link">About</a>)
+            </div>
+            <div class="links-grid">
+                <a href="NFL-2025-26.html">2025-26</a>
+                <a href="NFL-2024-25.html">2024-25</a>
+                <a href="NFL-2023-24.html">2023-24</a>
+                <a href="NFL-2022-23.html">2022-23</a>
+                <a href="NFL-2021-22.html">2021-22</a>
+                <a href="NFL-2020-21.html">2020-21</a>
+                <a href="NFL-2019-20.html">2019-20</a>
+                <a href="NFL-2018-19.html">2018-19</a>
+                <a href="NFL-2017-18.html">2017-18</a>
+                <a href="NFL-2016-17.html">2016-17</a>
+                <a href="NFL-2015-16.html">2015-16</a>
+                <a href="NFL-2014-15.html">2014-15</a>
+                <a href="NFL-2013-14.html">2013-14</a>
+                <a href="NFL-2012-13.html">2012-13</a>
+                <a href="NFL-2011-12.html">2011-12</a>
+                <a href="NFL-2010-11.html">2010-11</a>
+                <a href="NFL-2009-10.html">2009-10</a>
+                <a href="NFL-2008-09.html">2008-09</a>
+                <a href="NFL-2007-08.html">2007-08</a>
+                <a href="NFL-2006-07.html">2006-07</a>
+                <a href="NFL-2005-06.html">2005-06</a>
+                <a href="NFL-2004-05.html">2004-05</a>
+                <a href="NFL-2003-04.html">2003-04</a>
+                <a href="NFL-2002-03.html">2002-03</a>
+                <a href="NFL-2001-02.html">2001-02</a>
+                <a href="NFL-2000-01.html">2000-01</a>
+                <a href="NFL-1999-00.html">1999-00</a>
+                <a href="NFL-1998-99.html">1998-99</a>
+                <a href="NFL-1997-98.html">1997-98</a>
+                <a href="NFL-1996-97.html">1996-97</a>
+                <a href="NFL-1995-96.html">1995-96</a>
+                <a href="NFL-1994-95.html">1994-95</a>
+                <a href="NFL-1993-94.html">1993-94</a>
+                <a href="NFL-1992-93.html">1992-93</a>
+                <a href="NFL-1991-92.html">1991-92</a>
+                <a href="NFL-1990-91.html">1990-91</a>
+            </div>
+        </div>
+    
+        <div class="sports-section">
+            <h2>College Men's Basketball</h2>
+            <div class="links-grid">
+                <a href="#">2025-26</a>
+                <a href="NCAAM-2024-25.html">2024-25</a>
+                <a href="NCAAM-2023-24.html">2023-24</a>
+                <a href="NCAAM-2022-23.html">2022-23</a>
+                <a href="NCAAM-2021-22.html">2021-22</a>
+                <a href="NCAAM-2020-21.html">2020-21</a>
+                <a href="NCAAM-2019-20.html">2019-20</a>
+                <a href="#">2018-19</a>
+                <a href="#">2017-18</a>
+                <a href="#">2016-17</a>
+                <a href="#">2015-16</a>
+                <a href="NCAAM-2014-15.html">2014-15</a>
+                <a href="#">2013-14</a>
+                <a href="NCAAM-2012-13.html">2012-13</a>
+                <a href="#">2011-12</a>
+                <a href="NCAAM-2010-11.html">2010-11</a>
+                <a href="NCAAM-2009-10.html">2009-10</a>
+                <a href="NCAAM-2008-09.html">2008-09</a>
+                <a href="NCAAM-2007-08.html">2007-08</a>
+            </div>
+        </div>
+        
+        <div class="sports-section">
+            <h2>NBA</h2>
+            <div class="links-grid">
+                <a href="NBA-2025-26.html">2025-26</a>
+                <a href="NBA-2024-25.html">2024-25</a>
+                <a href="NBA-2023-24.html">2023-24</a>
+                <a href="NBA-2022-23.html">2022-23</a>
+                <a href="NBA-2021-22.html">2021-22</a>
+                <a href="NBA-2020-21.html">2020-21</a>
+                <a href="NBA-2019-20.html">2019-20</a>
+                <a href="NBA-2018-19.html">2018-19</a>
+                <a href="NBA-2017-18.html">2017-18</a>
+                <a href="NBA-2016-17.html">2016-17</a>
+                <a href="NBA-2015-16.html">2015-16</a>
+                <a href="NBA-2014-15.html">2014-15</a>
+                <a href="NBA-2013-14.html">2013-14</a>
+                <a href="NBA-2012-13.html">2012-13</a>
+                <a href="NBA-2011-12.html">2011-12</a>
+                <a href="NBA-2010-11.html">2010-11</a>
+                <a href="NBA-2009-10.html">2009-10</a>
+                <a href="NBA-2008-09.html">2008-09</a>
+                <a href="NBA-2007-08.html">2007-08</a>
+                <a href="NBA-2006-07.html">2006-07</a>
+                <a href="NBA-2005-06.html">2005-06</a>
+                <a href="NBA-2004-05.html">2004-05</a>
+                <a href="NBA-2003-04.html">2003-04</a>
+                <a href="NBA-2002-03.html">2002-03</a>
+                <a href="NBA-2001-02.html">2001-02</a>
+                <a href="NBA-2000-01.html">2000-01</a>
+                <a href="NBA-1999-00.html">1999-00</a>
+                <a href="NBA-1998-99.html">1998-99</a>
+                <a href="NBA-1997-98.html">1997-98</a>
+                <a href="NBA-1996-97.html">1996-97</a>
+                <a href="NBA-1995-96.html">1995-96</a>
+                <a href="NBA-1994-95.html">1994-95</a>
+                <a href="NBA-1993-94.html">1993-94</a>
+                <a href="NBA-1992-93.html">1992-93</a>
+                <a href="NBA-1991-92.html">1991-92</a>
+                <a href="NBA-1990-91.html">1990-91</a>
+            </div>
+        </div>
+        
+        <div class="sports-section">
+            <h2>NHL</h2>
+            <div class="links-grid">
+                <a href="NHL-2025-26.html">2025-26</a>
+                <a href="NHL-2024-25.html">2024-25</a>
+                <a href="NHL-2023-24.html">2023-24</a>
+                <a href="NHL-2022-23.html">2022-23</a>
+                <a href="NHL-2021-22.html">2021-22</a>
+                <a href="NHL-2020-21.html">2020-21</a>
+                <a href="NHL-2019-20.html">2019-20</a>
+                <a href="NHL-2018-19.html">2018-19</a>
+                <a href="NHL-2017-18.html">2017-18</a>
+                <a href="NHL-2016-17.html">2016-17</a>
+                <a href="NHL-2015-16.html">2015-16</a>
+                <a href="NHL-2014-15.html">2014-15</a>
+                <a href="NHL-2013-14.html">2013-14</a>
+                <a href="NHL-2012-13.html">2012-13</a>
+                <a href="NHL-2011-12.html">2011-12</a>
+                <a href="NHL-2010-11.html">2010-11</a>
+                <a href="NHL-2009-10.html">2009-10</a>
+                <a href="NHL-2008-09.html">2008-09</a>
+                <a href="NHL-2007-08.html">2007-08</a>
+                <a href="NHL-2006-07.html">2006-07</a>
+                <a href="NHL-2005-06.html">2005-06</a>
+                <a href="NHL-2004-05.html">2004-05</a>
+                <a href="NHL-2003-04.html">2003-04</a>
+                <a href="NHL-2002-03.html">2002-03</a>
+                <a href="NHL-2001-02.html">2001-02</a>
+                <a href="NHL-2000-01.html">2000-01</a>
+                <a href="NHL-1999-00.html">1999-00</a>
+                <a href="NHL-1998-99.html">1998-99</a>
+                <a href="NHL-1997-98.html">1997-98</a>
+                <a href="NHL-1996-97.html">1996-97</a>
+                <a href="NHL-1995-96.html">1995-96</a>
+                <a href="NHL-1994-95.html">1994-95</a>
+                <a href="NHL-1993-94.html">1993-94</a>
+                <a href="NHL-1992-93.html">1992-93</a>
+                <a href="NHL-1991-92.html">1991-92</a>
+                <a href="NHL-1990-91.html">1990-91</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    
