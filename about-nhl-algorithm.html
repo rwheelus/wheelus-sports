@@ -1,0 +1,94 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXB4LT3YBN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-MXB4LT3YBN');
+        </script>
+        <meta charset="UTF-8">
+        <title>About the NFL Algorithm</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #fefefe;
+                color: #222;
+                line-height: 1.7;
+                margin: 0;
+                padding: 0;
+            }
+            .logo {
+                width: 100%;
+                max-height: 200px;
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 30px;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            a.home-link {
+                display: block;
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 25px;
+                color: #0073e6;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            a.home-link:hover {
+                text-decoration: underline;
+            }
+            ul {
+                list-style-type: disc;
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <!-- Logo -->
+        <img src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo" class="logo">
+    
+        <!-- Return link -->
+        <a href="index.html" class="home-link">← Return to Homepage</a>
+    
+        <!-- Title -->
+        <div class="container">
+            <h1>About the NHL Algorithm</h1>
+    
+            <p>The <strong>NHL Algorithm</strong> scores teams based on opponent strength, margin of victory, and whether the game was played at home or on the road. Each game produces a performance score for both teams based on those inputs, and the calculation is iterated through until a steady state is found and each team’s rating changes by less than 1e-7.</p>
+    
+            <h2>Table Glossary</h2>
+            <ul>
+                <li><strong>Rank:</strong> The team’s actual ranking</li>
+                <li><strong>Team:</strong> The team’s name</li>
+                <li><strong>Rating:</strong> The team’s rating using the system described above</li>
+                <li><strong>Overall Record:</strong> The team’s record across all games played in the season</li>
+                <li><strong>Regular Season:</strong> The team’s record for Regular Season games</li>
+                <li><strong>Post Season:</strong> The team’s record for Post Season games</li>
+                <li><strong>OT Record:</strong> The team’s record in games that went into overtime</li>
+                <li><strong>Shootout Record:</strong> The team’s record in games that went into shootouts</li>
+                <li><strong>OT Period Record:</strong> The team’s record in overtime where each non-shootout overtime period is considered separately. For example, if a team wins in 3OT, they would have naturally drawn the first two overtime periods and won the third, so their record would be 1-0-2 (1 win, 0 losses, 2 draws).</li>
+                <li><strong>Offensive Goals/G:</strong> How many goals per game the team scores (excl. shootout goals)</li>
+                <li><strong>Defensive Goals/G:</strong> How many goals per game the team gives up (excl. shootout goals)</li>
+            </ul>
+    
+            <p style="text-align:center; margin-top: 40px; font-size: 0.9em; color: #555;">
+                Last Updated: 2025-10-24 09:31:47
+            </p>
+        </div>
+    
+    </body>
+    </html>
+    
