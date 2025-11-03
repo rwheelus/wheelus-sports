@@ -66,12 +66,14 @@
         <!-- Title -->
         <div class="container">
             <h1>About the NHL Algorithm</h1>
+
+            <p><strong>Note:</strong> There are currently some issues I am working on resolving regarding overtime period, shootout, and other custom records I display. Please bear with me until these are resolved.</p>
     
             <p>The <strong>NHL Algorithm</strong> scores teams based on opponent strength, margin of victory, and whether the game was played at home or on the road. Each game produces a performance score for both teams based on those inputs. A team's rating is the average of all of those game values. The calculation is then iterated through until a steady state is found and each team’s rating changes by less than 1e-7.</p>
     
             <h2>Table Glossary</h2>
             <ul>
-                <li><strong>Rank:</strong> The team’s actual ranking</li>
+                <li><strong>Rank:</strong> The team’s ranking according to their Rating</li>
                 <li><strong>Team:</strong> The team’s name</li>
                 <li><strong>Rating:</strong> The team’s rating using the system described above</li>
                 <li><strong>Overall Record:</strong> The team’s record across all games played in the season</li>
@@ -85,7 +87,7 @@
             </ul>
     
             <p style="text-align:center; margin-top: 40px; font-size: 0.9em; color: #555;">
-                Last Updated: 2025-10-27 11:44:54
+                Last Updated: 2025-11-03 09:59:24
             </p>
         </div>
     
