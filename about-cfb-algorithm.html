@@ -67,7 +67,13 @@
         <div class="container">
             <h1>About the College Football Algorithm</h1>
     
-            <p><strong>College Football</strong> is a notoriously difficult sport in which to “accurately” rank teams. While the 130+ teams in Division 1 FBS are all technically competing at the same level, there is an astonishing lack of parity between the teams. No single approach to the problem is without its flaws. On the surface, one might think that a team’s record is enough information to generate a ranking. But how do you compare a team that went 12-0 playing the 12 weakest teams in the division to a team that went 9-3 playing teams exclusively in the top 25? Or how important is an on-field result if it diverges from a team’s performance relative to their normal results (i.e., what if a team otherwise favored to win the national championship loses to the #100 ranked team)? How important are accolades (such as winning the conference) to the final result? How important are results from last season when ranking teams this season? How important is it to consider when two teams played (and how good each team was perceived to be at the time)? And perhaps most importantly, should teams be ranked based on what we think would happen if they were to play, or should we rank them based on what they have accomplished thus far in the season? Should a ranking system be predictive and describe team strength, or should it be a backward-looking resume?</p>
+            <p><strong>College Football</strong> is a notoriously difficult sport in which to “accurately” rank teams. While the 130+ teams in Division 1 FBS are all technically competing at the same level, there is an astonishing lack of parity between the teams. No single approach to the problem is without its flaws. <br><br>
+            On the surface, one might think that a team’s record is enough information to generate a ranking. But how do you compare a team that went 12-0 playing the 12 weakest teams in the division to a team that went 9-3 playing teams exclusively in the top 25? <br><br>
+            Or how important is an on-field result if it diverges from a team’s performance relative to their normal results (i.e., what if a team otherwise favored to win the national championship loses to the #100 ranked team)? <br><br>
+            How important are accolades (such as winning the conference) to the final result? <br><br>
+            How important are results from last season when ranking teams this season? <br><br>
+            How important is it to consider when two teams played (and how good each team was perceived to be at the time)? <br><br>
+            And perhaps most importantly, should teams be ranked based on what we think would happen if they were to play, or should we rank them based on what they have accomplished thus far in the season? Should a ranking system be predictive and describe team strength, or should it be a backward-looking resume?</p>
     
             <h2>Here is my personal philosophy:</h2>
             <ul>
@@ -79,7 +85,7 @@
                 
             </ul>
             
-            <h2>As such, my ranking system takes the following into consideration to produce a score from 0 to 1:</h2>
+            <h3>As such, my ranking system takes the following into consideration to produce a score from 0 to 1:</h3>
             <ul>
                 <li>A team’s overall win percentage</li>
                 <li>Elo Rating, which factors in margins of victory and defeat and carries over from previous seasons (after adjusting toward the mean during the offseason)</li>
@@ -92,7 +98,7 @@
             After each team is given a rating from 0 to 1, the algorithm checks for head-to-head results between teams rated in the same neighborhood as one another. If a team is rated higher than a team to whom they lost, these teams may be shuffled in a way that attempts to maintain ordering based on overall rating. </p>
             
             <p style="text-align:center; margin-top: 40px; font-size: 0.9em; color: #555;">
-                Last Updated: 2025-11-09 11:01:35
+                Last Updated: 2025-11-10 11:29:20
             </p>
         </div>
     
