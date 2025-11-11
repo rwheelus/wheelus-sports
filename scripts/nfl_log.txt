@@ -1,0 +1,1136 @@
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 5ac55a8] NFL rankings updated for 2025 — 2025-10-17 13:00:45
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   391a027..5ac55a8  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 93 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 8
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Tampa Bay Buccaneers: best=2, worst=4
+  Indianapolis Colts: best=5, worst=14
+  Philadelphia Eagles: best=1, worst=3
+  Los Angeles Chargers: best=9, worst=14
+  Buffalo Bills: best=17, worst=26
+  Los Angeles Rams: best=4, worst=13
+  Seattle Seahawks: best=4, worst=16
+  San Francisco 49ers: best=3, worst=10
+  Denver Broncos: best=13, worst=18
+  Jacksonville Jaguars: best=16, worst=20
+  Detroit Lions: best=2, worst=11
+  Pittsburgh Steelers: best=5, worst=22
+  New England Patriots: best=16, worst=23
+  Atlanta Falcons: best=3, worst=10
+  Carolina Panthers: best=23, worst=28
+  Chicago Bears: best=7, worst=12
+  Kansas City Chiefs: best=17, worst=29
+  Minnesota Vikings: best=4, worst=11
+  Green Bay Packers: best=1, worst=10
+  Washington Commanders: best=8, worst=13
+  Cincinnati Bengals: best=14, worst=19
+  Dallas Cowboys: best=24, worst=30
+  Arizona Cardinals: best=20, worst=26
+  Las Vegas Raiders: best=13, worst=20
+  Houston Texans: best=17, worst=22
+  New York Giants: best=28, worst=32
+  Baltimore Ravens: best=23, worst=31
+  Cleveland Browns: best=24, worst=32
+  Miami Dolphins: best=25, worst=31
+  New Orleans Saints: best=24, worst=31
+  Tennessee Titans: best=19, worst=25
+  New York Jets: best=27, worst=32
+
+Completed best/worst computation in 56.5 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 8 ranking violations; Stage1 minimal = 8.
+Context: 8 / 93 non-tied games (8.60%)
+
+Final standings (top 16 shown):
+ Rank                  Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1   Philadelphia Eagles     4       2      0          1           3               14
+    2  Tampa Bay Buccaneers     5       1      0          2           4               13
+    3   San Francisco 49ers     4       2      0          3          10               11
+    4      Seattle Seahawks     4       2      0          4          16               11
+    5     Green Bay Packers     3       1      1          1          10               10
+    6       Atlanta Falcons     3       2      0          3          10               10
+    7      Los Angeles Rams     4       2      0          4          13                9
+    8    Indianapolis Colts     5       1      0          5          14               10
+    9         Detroit Lions     4       2      0          2          11                8
+   10     Minnesota Vikings     3       2      0          4          11                7
+   11         Chicago Bears     3       2      0          7          12                7
+   12 Washington Commanders     3       3      0          8          13                8
+   13  Los Angeles Chargers     4       2      0          9          14               10
+   14        Denver Broncos     4       2      0         13          18                8
+   15    Cincinnati Bengals     3       4      0         14          19                9
+   16  Jacksonville Jaguars     4       2      0         16          20               12
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 683744a] NFL rankings updated for 2025 — 2025-10-20 12:02:02
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   a4f8ec1..683744a  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 105 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 9
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=5, worst=14
+  Philadelphia Eagles: best=1, worst=3
+  San Francisco 49ers: best=3, worst=5
+  Tampa Bay Buccaneers: best=2, worst=4
+  Los Angeles Rams: best=4, worst=13
+  New England Patriots: best=20, worst=22
+  Denver Broncos: best=13, worst=16
+  Detroit Lions: best=2, worst=11
+  Los Angeles Chargers: best=12, worst=15
+  Buffalo Bills: best=21, worst=26
+  Green Bay Packers: best=1, worst=10
+  Pittsburgh Steelers: best=5, worst=21
+  Carolina Panthers: best=24, worst=30
+  Chicago Bears: best=8, worst=12
+  Kansas City Chiefs: best=17, worst=20
+  Jacksonville Jaguars: best=16, worst=18
+  Seattle Seahawks: best=4, worst=16
+  Atlanta Falcons: best=4, worst=10
+  Minnesota Vikings: best=5, worst=11
+  Dallas Cowboys: best=9, worst=30
+  Washington Commanders: best=9, worst=14
+  Cincinnati Bengals: best=14, worst=17
+  Las Vegas Raiders: best=18, worst=21
+  Cleveland Browns: best=24, worst=30
+  Arizona Cardinals: best=23, worst=27
+  Houston Texans: best=17, worst=23
+  New York Giants: best=27, worst=32
+  Baltimore Ravens: best=23, worst=29
+  Miami Dolphins: best=28, worst=31
+  New Orleans Saints: best=25, worst=31
+  Tennessee Titans: best=22, worst=26
+  New York Jets: best=30, worst=32
+
+Completed best/worst computation in 55.9 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 9 ranking violations; Stage1 minimal = 9.
+Context: 9 / 105 non-tied games (8.57%)
+
+Final standings (top 16 shown):
+ Rank                  Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1   Philadelphia Eagles     5       2      0          1           3               20
+    2  Tampa Bay Buccaneers     5       1      0          2           4               14
+    3   San Francisco 49ers     5       2      0          3           5               15
+    4      Los Angeles Rams     5       2      0          4          13               14
+    5    Indianapolis Colts     6       1      0          5          14               15
+    6     Green Bay Packers     4       1      1          1          10               12
+    7      Seattle Seahawks     4       2      0          4          16               11
+    8         Detroit Lions     4       2      0          2          11               10
+    9       Atlanta Falcons     3       3      0          4          10               10
+   10     Minnesota Vikings     3       3      0          5          11                9
+   11         Chicago Bears     4       2      0          8          12                9
+   12 Washington Commanders     3       4      0          9          14                8
+   13  Los Angeles Chargers     4       3      0         12          15               12
+   14        Denver Broncos     5       2      0         13          16               11
+   15    Cincinnati Bengals     3       4      0         14          17               10
+   16  Jacksonville Jaguars     4       3      0         16          18               15
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 1c7d48a] NFL rankings updated for 2025 — 2025-10-21 12:02:02
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   de7f3dc..1c7d48a  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 107 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 9
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=7, worst=14
+  Philadelphia Eagles: best=1, worst=3
+  New England Patriots: best=20, worst=22
+  Detroit Lions: best=2, worst=3
+  Los Angeles Rams: best=6, worst=13
+  San Francisco 49ers: best=5, worst=5
+  Denver Broncos: best=13, worst=16
+  Seattle Seahawks: best=6, worst=16
+  Tampa Bay Buccaneers: best=4, worst=4
+  Carolina Panthers: best=24, worst=30
+  Chicago Bears: best=8, worst=12
+  Kansas City Chiefs: best=17, worst=20
+  Green Bay Packers: best=1, worst=2
+  Jacksonville Jaguars: best=16, worst=18
+  Buffalo Bills: best=21, worst=26
+  Los Angeles Chargers: best=12, worst=15
+  Pittsburgh Steelers: best=7, worst=21
+  Atlanta Falcons: best=6, worst=10
+  Minnesota Vikings: best=7, worst=11
+  Dallas Cowboys: best=9, worst=30
+  Washington Commanders: best=9, worst=14
+  Cincinnati Bengals: best=14, worst=17
+  Las Vegas Raiders: best=18, worst=21
+  Cleveland Browns: best=24, worst=30
+  Arizona Cardinals: best=23, worst=27
+  Houston Texans: best=17, worst=23
+  New York Giants: best=27, worst=32
+  Baltimore Ravens: best=23, worst=29
+  Miami Dolphins: best=28, worst=31
+  New Orleans Saints: best=25, worst=31
+  Tennessee Titans: best=22, worst=26
+  New York Jets: best=30, worst=32
+
+Completed best/worst computation in 55.8 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 9 ranking violations; Stage1 minimal = 9.
+Context: 9 / 107 non-tied games (8.41%)
+
+Final standings (top 16 shown):
+ Rank                  Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1   Philadelphia Eagles     5       2      0          1           3               20
+    2     Green Bay Packers     4       1      1          1           2               13
+    3         Detroit Lions     5       2      0          2           3               15
+    4  Tampa Bay Buccaneers     5       2      0          4           4               15
+    5   San Francisco 49ers     5       2      0          5           5               16
+    6      Los Angeles Rams     5       2      0          6          13               14
+    7    Indianapolis Colts     6       1      0          7          14               15
+    8      Seattle Seahawks     5       2      0          6          16               13
+    9       Atlanta Falcons     3       3      0          6          10               10
+   10     Minnesota Vikings     3       3      0          7          11                9
+   11         Chicago Bears     4       2      0          8          12                9
+   12 Washington Commanders     3       4      0          9          14                8
+   13  Los Angeles Chargers     4       3      0         12          15               12
+   14        Denver Broncos     5       2      0         13          16               11
+   15    Cincinnati Bengals     3       4      0         14          17               10
+   16  Jacksonville Jaguars     4       3      0         16          18               15
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 9e50026] NFL rankings updated for 2025 — 2025-10-24 12:04:34
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   8186dc8..9e50026  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 108 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 10
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=1, worst=14
+  Philadelphia Eagles: best=1, worst=9
+  New England Patriots: best=12, worst=24
+  Detroit Lions: best=2, worst=8
+  Los Angeles Chargers: best=2, worst=15
+  Los Angeles Rams: best=6, worst=21
+  San Francisco 49ers: best=5, worst=13
+  Denver Broncos: best=3, worst=16
+  Seattle Seahawks: best=6, worst=18
+  Tampa Bay Buccaneers: best=4, worst=12
+  Carolina Panthers: best=13, worst=30
+  Chicago Bears: best=3, worst=27
+  Green Bay Packers: best=1, worst=7
+  Kansas City Chiefs: best=5, worst=26
+  Buffalo Bills: best=17, worst=26
+  Jacksonville Jaguars: best=12, worst=22
+  Pittsburgh Steelers: best=7, worst=21
+  Atlanta Falcons: best=6, worst=24
+  Minnesota Vikings: best=5, worst=29
+  Dallas Cowboys: best=5, worst=30
+  Washington Commanders: best=4, worst=31
+  Cincinnati Bengals: best=6, worst=21
+  Las Vegas Raiders: best=6, worst=32
+  Cleveland Browns: best=22, worst=30
+  Arizona Cardinals: best=9, worst=30
+  Houston Texans: best=13, worst=27
+  New York Giants: best=25, worst=32
+  Baltimore Ravens: best=20, worst=29
+  Miami Dolphins: best=23, worst=31
+  New Orleans Saints: best=21, worst=31
+  Tennessee Titans: best=16, worst=32
+  New York Jets: best=26, worst=32
+
+Completed best/worst computation in 132.7 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 10 ranking violations; Stage1 minimal = 10.
+Context: 10 / 108 non-tied games (9.26%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     5       2      0          1           9               20
+    2    Green Bay Packers     4       1      1          1           7               13
+    3        Detroit Lions     5       2      0          2           8               15
+    4 Tampa Bay Buccaneers     5       2      0          4          12               15
+    5  San Francisco 49ers     5       2      0          5          13               16
+    6     Los Angeles Rams     5       2      0          6          21               14
+    7   Indianapolis Colts     6       1      0          1          14               16
+    8 Los Angeles Chargers     5       3      0          2          15               15
+    9     Seattle Seahawks     5       2      0          6          18               13
+   10       Denver Broncos     5       2      0          3          16               11
+   11   Cincinnati Bengals     3       4      0          6          21               10
+   12 Jacksonville Jaguars     4       3      0         12          22               15
+   13  Pittsburgh Steelers     4       2      0          7          21               10
+   14 New England Patriots     5       2      0         12          24               11
+   15   Kansas City Chiefs     4       3      0          5          26               10
+   16    Arizona Cardinals     2       5      0          9          30                5
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+M	college-football-2025-2026.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main d2c26f6] NFL rankings updated for 2025 — 2025-10-27 07:22:45
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   b38dc0a..d2c26f6  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 119 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 14
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=1, worst=14
+  Philadelphia Eagles: best=1, worst=13
+  Tampa Bay Buccaneers: best=2, worst=16
+  New England Patriots: best=4, worst=24
+  Denver Broncos: best=3, worst=24
+  San Francisco 49ers: best=3, worst=25
+  Seattle Seahawks: best=1, worst=18
+  Los Angeles Chargers: best=2, worst=16
+  Buffalo Bills: best=1, worst=27
+  Los Angeles Rams: best=1, worst=21
+  Green Bay Packers: best=1, worst=13
+  Detroit Lions: best=2, worst=23
+  Pittsburgh Steelers: best=3, worst=23
+  Jacksonville Jaguars: best=1, worst=22
+  Kansas City Chiefs: best=5, worst=23
+  Chicago Bears: best=3, worst=28
+  Carolina Panthers: best=8, worst=30
+  Dallas Cowboys: best=12, worst=30
+  Cincinnati Bengals: best=6, worst=31
+  Atlanta Falcons: best=6, worst=30
+  Washington Commanders: best=7, worst=31
+  Minnesota Vikings: best=5, worst=29
+  Houston Texans: best=6, worst=23
+  Baltimore Ravens: best=14, worst=29
+  Arizona Cardinals: best=8, worst=30
+  Cleveland Browns: best=18, worst=32
+  Las Vegas Raiders: best=6, worst=32
+  New York Giants: best=27, worst=32
+  Miami Dolphins: best=11, worst=31
+  New Orleans Saints: best=22, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=24, worst=32
+
+Completed best/worst computation in 77.9 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 14 ranking violations; Stage1 minimal = 14.
+Context: 14 / 119 non-tied games (11.76%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          13               23
+    2    Green Bay Packers     5       1      1          1          13               17
+    3        Detroit Lions     5       2      0          2          23               17
+    4 Tampa Bay Buccaneers     6       2      0          2          16               18
+    5  San Francisco 49ers     5       3      0          3          25               16
+    6     Los Angeles Rams     5       2      0          1          21               17
+    7   Indianapolis Colts     7       1      0          1          14               19
+    8 Los Angeles Chargers     5       3      0          2          16               17
+    9       Denver Broncos     6       2      0          3          24               16
+   10     Seattle Seahawks     5       2      0          1          18               14
+   11   Cincinnati Bengals     3       5      0          6          31               10
+   12 Jacksonville Jaguars     4       3      0          1          22               16
+   13  Pittsburgh Steelers     4       3      0          3          23               12
+   14 New England Patriots     6       2      0          4          24               15
+   15   Kansas City Chiefs     4       3      0          5          23               11
+   16      Atlanta Falcons     3       4      0          6          30               11
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main a8a5c30] NFL rankings updated for 2025 — 2025-10-28 07:22:40
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   3ae23c5..a8a5c30  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 120 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 14
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=1, worst=14
+  Philadelphia Eagles: best=1, worst=13
+  Tampa Bay Buccaneers: best=2, worst=16
+  New England Patriots: best=4, worst=24
+  Denver Broncos: best=3, worst=24
+  Green Bay Packers: best=1, worst=13
+  Kansas City Chiefs: best=5, worst=23
+  Seattle Seahawks: best=1, worst=18
+  Los Angeles Chargers: best=2, worst=16
+  Buffalo Bills: best=1, worst=27
+  Los Angeles Rams: best=1, worst=21
+  Detroit Lions: best=2, worst=23
+  San Francisco 49ers: best=3, worst=25
+  Pittsburgh Steelers: best=3, worst=23
+  Jacksonville Jaguars: best=1, worst=22
+  Chicago Bears: best=8, worst=27
+  Carolina Panthers: best=8, worst=30
+  Dallas Cowboys: best=12, worst=30
+  Cincinnati Bengals: best=6, worst=31
+  Atlanta Falcons: best=6, worst=30
+  Minnesota Vikings: best=5, worst=26
+  Washington Commanders: best=13, worst=31
+  Houston Texans: best=6, worst=23
+  Baltimore Ravens: best=14, worst=29
+  Arizona Cardinals: best=8, worst=30
+  Las Vegas Raiders: best=6, worst=32
+  Cleveland Browns: best=18, worst=32
+  New York Giants: best=27, worst=32
+  Miami Dolphins: best=11, worst=31
+  New Orleans Saints: best=22, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=24, worst=32
+
+Completed best/worst computation in 77.5 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 14 ranking violations; Stage1 minimal = 14.
+Context: 14 / 120 non-tied games (11.67%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          13               24
+    2    Green Bay Packers     5       1      1          1          13               17
+    3        Detroit Lions     5       2      0          2          23               17
+    4 Tampa Bay Buccaneers     6       2      0          2          16               18
+    5  San Francisco 49ers     5       3      0          3          25               16
+    6     Los Angeles Rams     5       2      0          1          21               17
+    7   Indianapolis Colts     7       1      0          1          14               19
+    8 Los Angeles Chargers     5       3      0          2          16               18
+    9       Denver Broncos     6       2      0          3          24               16
+   10     Seattle Seahawks     5       2      0          1          18               14
+   11   Cincinnati Bengals     3       5      0          6          31               10
+   12 Jacksonville Jaguars     4       3      0          1          22               17
+   13   Kansas City Chiefs     5       3      0          5          23               14
+   14  Pittsburgh Steelers     4       3      0          3          23               12
+   15 New England Patriots     6       2      0          4          24               15
+   16      Atlanta Falcons     3       4      0          6          30               11
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main aa076c5] NFL rankings updated for 2025 — 2025-10-31 07:22:12
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   d426960..aa076c5  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 121 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 14
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=1, worst=14
+  Philadelphia Eagles: best=1, worst=12
+  Tampa Bay Buccaneers: best=2, worst=15
+  New England Patriots: best=4, worst=24
+  Denver Broncos: best=3, worst=24
+  Green Bay Packers: best=1, worst=13
+  Kansas City Chiefs: best=5, worst=22
+  Seattle Seahawks: best=1, worst=18
+  Los Angeles Chargers: best=2, worst=16
+  Buffalo Bills: best=1, worst=27
+  Los Angeles Rams: best=1, worst=21
+  Detroit Lions: best=2, worst=20
+  San Francisco 49ers: best=3, worst=25
+  Pittsburgh Steelers: best=3, worst=23
+  Jacksonville Jaguars: best=1, worst=22
+  Chicago Bears: best=8, worst=27
+  Carolina Panthers: best=8, worst=30
+  Baltimore Ravens: best=14, worst=29
+  Dallas Cowboys: best=12, worst=30
+  Cincinnati Bengals: best=6, worst=31
+  Atlanta Falcons: best=6, worst=30
+  Minnesota Vikings: best=5, worst=26
+  Washington Commanders: best=13, worst=31
+  Houston Texans: best=6, worst=23
+  Arizona Cardinals: best=8, worst=30
+  Las Vegas Raiders: best=6, worst=32
+  Cleveland Browns: best=18, worst=32
+  New York Giants: best=27, worst=32
+  Miami Dolphins: best=17, worst=31
+  New Orleans Saints: best=22, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=24, worst=32
+
+Completed best/worst computation in 61.3 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 14 ranking violations; Stage1 minimal = 14.
+Context: 14 / 121 non-tied games (11.57%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          12               24
+    2    Green Bay Packers     5       1      1          1          13               17
+    3        Detroit Lions     5       2      0          2          20               18
+    4 Tampa Bay Buccaneers     6       2      0          2          15               18
+    5  San Francisco 49ers     5       3      0          3          25               16
+    6     Los Angeles Rams     5       2      0          1          21               18
+    7   Indianapolis Colts     7       1      0          1          14               19
+    8 Los Angeles Chargers     5       3      0          2          16               18
+    9       Denver Broncos     6       2      0          3          24               16
+   10     Seattle Seahawks     5       2      0          1          18               14
+   11   Cincinnati Bengals     3       5      0          6          31               10
+   12 Jacksonville Jaguars     4       3      0          1          22               17
+   13   Kansas City Chiefs     5       3      0          5          22               15
+   14  Pittsburgh Steelers     4       3      0          3          23               12
+   15 New England Patriots     6       2      0          4          24               15
+   16      Atlanta Falcons     3       4      0          6          30               11
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+M	college-football-2025-2026.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 895e5ff] NFL rankings updated for 2025 — 2025-11-03 07:22:35
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   dd5bd97..895e5ff  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 133 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 16
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=3, worst=13
+  New England Patriots: best=1, worst=21
+  Denver Broncos: best=5, worst=20
+  Philadelphia Eagles: best=1, worst=12
+  Los Angeles Rams: best=1, worst=11
+  Tampa Bay Buccaneers: best=2, worst=16
+  Seattle Seahawks: best=1, worst=8
+  Los Angeles Chargers: best=4, worst=15
+  San Francisco 49ers: best=3, worst=25
+  Buffalo Bills: best=1, worst=19
+  Kansas City Chiefs: best=10, worst=21
+  Chicago Bears: best=17, worst=25
+  Carolina Panthers: best=6, worst=30
+  Detroit Lions: best=2, worst=23
+  Green Bay Packers: best=1, worst=25
+  Pittsburgh Steelers: best=2, worst=12
+  Jacksonville Jaguars: best=3, worst=16
+  Minnesota Vikings: best=7, worst=23
+  Houston Texans: best=10, worst=21
+  Baltimore Ravens: best=14, worst=23
+  Dallas Cowboys: best=19, worst=30
+  Washington Commanders: best=21, worst=31
+  Atlanta Falcons: best=5, worst=30
+  Cincinnati Bengals: best=18, worst=32
+  Miami Dolphins: best=12, worst=32
+  New York Giants: best=26, worst=32
+  Cleveland Browns: best=17, worst=32
+  Arizona Cardinals: best=9, worst=30
+  Las Vegas Raiders: best=18, worst=32
+  New Orleans Saints: best=21, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=21, worst=32
+
+Completed best/worst computation in 72.8 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 16 ranking violations; Stage1 minimal = 16.
+Context: 16 / 133 non-tied games (12.03%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          12               26
+    2 Tampa Bay Buccaneers     6       2      0          2          16               20
+    3  San Francisco 49ers     6       3      0          3          25               20
+    4     Seattle Seahawks     6       2      0          1           8               19
+    5  Pittsburgh Steelers     5       3      0          2          12               21
+    6     Los Angeles Rams     6       2      0          1          11               20
+    7 Jacksonville Jaguars     5       3      0          3          16               21
+    8   Indianapolis Colts     7       2      0          3          13               21
+    9 Los Angeles Chargers     6       3      0          4          15               21
+   10 New England Patriots     7       2      0          1          21               20
+   11       Denver Broncos     7       2      0          5          20               19
+   12        Buffalo Bills     6       2      0          1          19               17
+   13    Carolina Panthers     5       4      0          6          30               14
+   14    Green Bay Packers     5       2      1          1          25               18
+   15   Kansas City Chiefs     5       4      0         10          21               15
+   16      Atlanta Falcons     3       5      0          5          30               13
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Traceback (most recent call last):
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1303, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1349, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1468, in connect
+    super().connect()
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 962, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\socket.py", line 839, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\socket.py", line 974, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\robin\.spyder-py3\NFL Ranking Violations -- two stage ILP.py", line 29, in <module>
+    allNFLGames = pd.read_html(f"https://www.pro-football-reference.com/years/{year}/games.htm")[0]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 1240, in read_html
+    return _parse(
+           ^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 983, in _parse
+    tables = p.parse_tables()
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 249, in parse_tables
+    tables = self._parse_tables(self._build_doc(), self.match, self.attrs)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 806, in _build_doc
+    raise e
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 785, in _build_doc
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 728, in get_handle
+    ioargs = _get_filepath_or_buffer(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 384, in _get_filepath_or_buffer
+    with urlopen(req_info) as req:
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 289, in urlopen
+    return urllib.request.urlopen(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 1904e13] NFL rankings updated for 2025 — 2025-11-05 17:23:34
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   24d80f1..1904e13  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 134 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 16
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Indianapolis Colts: best=4, worst=12
+  New England Patriots: best=4, worst=21
+  Denver Broncos: best=6, worst=20
+  Philadelphia Eagles: best=1, worst=11
+  Los Angeles Rams: best=1, worst=11
+  Tampa Bay Buccaneers: best=2, worst=15
+  Seattle Seahawks: best=1, worst=7
+  Los Angeles Chargers: best=5, worst=15
+  San Francisco 49ers: best=3, worst=23
+  Buffalo Bills: best=1, worst=19
+  Kansas City Chiefs: best=10, worst=21
+  Chicago Bears: best=17, worst=25
+  Carolina Panthers: best=12, worst=28
+  Detroit Lions: best=2, worst=23
+  Green Bay Packers: best=1, worst=8
+  Pittsburgh Steelers: best=3, worst=9
+  Jacksonville Jaguars: best=3, worst=16
+  Minnesota Vikings: best=8, worst=23
+  Baltimore Ravens: best=15, worst=23
+  Dallas Cowboys: best=22, worst=30
+  Washington Commanders: best=21, worst=31
+  Atlanta Falcons: best=8, worst=30
+  Arizona Cardinals: best=9, worst=26
+  Cincinnati Bengals: best=18, worst=32
+  Houston Texans: best=11, worst=21
+  New York Giants: best=26, worst=32
+  Miami Dolphins: best=15, worst=32
+  Cleveland Browns: best=18, worst=32
+  Las Vegas Raiders: best=18, worst=32
+  New Orleans Saints: best=21, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=23, worst=32
+
+Completed best/worst computation in 69.4 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 16 ranking violations; Stage1 minimal = 16.
+Context: 16 / 134 non-tied games (11.94%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          11               26
+    2 Tampa Bay Buccaneers     6       2      0          2          15               20
+    3  San Francisco 49ers     6       3      0          3          23               21
+    4     Seattle Seahawks     6       2      0          1           7               20
+    5     Los Angeles Rams     6       2      0          1          11               20
+    6 Jacksonville Jaguars     5       3      0          3          16               21
+    7    Green Bay Packers     5       2      1          1           8               19
+    8  Pittsburgh Steelers     5       3      0          3           9               21
+    9   Indianapolis Colts     7       2      0          4          12               22
+   10 Los Angeles Chargers     6       3      0          5          15               21
+   11 New England Patriots     7       2      0          4          21               20
+   12       Denver Broncos     7       2      0          6          20               19
+   13      Atlanta Falcons     3       5      0          8          30               13
+   14        Buffalo Bills     6       2      0          1          19               17
+   15    Minnesota Vikings     4       4      0          8          23               15
+   16   Kansas City Chiefs     5       4      0         10          21               15
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Traceback (most recent call last):
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1303, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1349, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 1468, in connect
+    super().connect()
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\http\client.py", line 962, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\socket.py", line 839, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\socket.py", line 974, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\robin\.spyder-py3\NFL Ranking Violations -- two stage ILP.py", line 29, in <module>
+    allNFLGames = pd.read_html(f"https://www.pro-football-reference.com/years/{year}/games.htm")[0]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 1240, in read_html
+    return _parse(
+           ^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 983, in _parse
+    tables = p.parse_tables()
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 249, in parse_tables
+    tables = self._parse_tables(self._build_doc(), self.match, self.attrs)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 806, in _build_doc
+    raise e
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\html.py", line 785, in _build_doc
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 728, in get_handle
+    ioargs = _get_filepath_or_buffer(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 384, in _get_filepath_or_buffer
+    with urlopen(req_info) as req:
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pandas\io\common.py", line 289, in urlopen
+    return urllib.request.urlopen(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\robin\anaconda3\envs\collegefootball\Lib\urllib\request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main b44f7c3] NFL rankings updated for 2025 — 2025-11-07 10:42:09
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   c1e8595..b44f7c3  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 135 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 16
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Denver Broncos: best=6, worst=20
+  Indianapolis Colts: best=4, worst=12
+  New England Patriots: best=4, worst=21
+  Philadelphia Eagles: best=1, worst=11
+  Los Angeles Rams: best=1, worst=11
+  Tampa Bay Buccaneers: best=2, worst=15
+  Seattle Seahawks: best=1, worst=7
+  Los Angeles Chargers: best=5, worst=15
+  San Francisco 49ers: best=3, worst=23
+  Buffalo Bills: best=1, worst=19
+  Kansas City Chiefs: best=10, worst=21
+  Chicago Bears: best=17, worst=25
+  Carolina Panthers: best=12, worst=28
+  Detroit Lions: best=2, worst=23
+  Green Bay Packers: best=1, worst=8
+  Pittsburgh Steelers: best=3, worst=9
+  Jacksonville Jaguars: best=3, worst=16
+  Minnesota Vikings: best=8, worst=23
+  Baltimore Ravens: best=15, worst=23
+  Dallas Cowboys: best=22, worst=30
+  Washington Commanders: best=21, worst=31
+  Atlanta Falcons: best=8, worst=30
+  Arizona Cardinals: best=9, worst=26
+  Cincinnati Bengals: best=18, worst=32
+  Houston Texans: best=11, worst=21
+  New York Giants: best=26, worst=32
+  Miami Dolphins: best=15, worst=32
+  Cleveland Browns: best=18, worst=32
+  Las Vegas Raiders: best=18, worst=32
+  New Orleans Saints: best=21, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=23, worst=32
+
+Completed best/worst computation in 71.5 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 16 ranking violations; Stage1 minimal = 16.
+Context: 16 / 135 non-tied games (11.85%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          11               26
+    2 Tampa Bay Buccaneers     6       2      0          2          15               20
+    3  San Francisco 49ers     6       3      0          3          23               21
+    4     Seattle Seahawks     6       2      0          1           7               20
+    5    Green Bay Packers     5       2      1          1           8               19
+    6  Pittsburgh Steelers     5       3      0          3           9               21
+    7     Los Angeles Rams     6       2      0          1          11               20
+    8   Indianapolis Colts     7       2      0          4          12               23
+    9 Los Angeles Chargers     6       3      0          5          15               22
+   10 Jacksonville Jaguars     5       3      0          3          16               21
+   11       Denver Broncos     8       2      0          6          20               21
+   12 New England Patriots     7       2      0          4          21               20
+   13      Atlanta Falcons     3       5      0          8          30               13
+   14        Buffalo Bills     6       2      0          1          19               17
+   15    Minnesota Vikings     4       4      0          8          23               15
+   16   Kansas City Chiefs     5       4      0         10          21               15
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main bb110ba] NFL rankings updated for 2025 — 2025-11-07 14:14:41
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   a9b249e..bb110ba  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 135 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 16
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Denver Broncos: best=6, worst=20
+  Indianapolis Colts: best=4, worst=12
+  New England Patriots: best=4, worst=21
+  Philadelphia Eagles: best=1, worst=11
+  Los Angeles Rams: best=1, worst=11
+  Tampa Bay Buccaneers: best=2, worst=15
+  Seattle Seahawks: best=1, worst=7
+  Los Angeles Chargers: best=5, worst=15
+  San Francisco 49ers: best=3, worst=23
+  Buffalo Bills: best=1, worst=19
+  Kansas City Chiefs: best=10, worst=21
+  Chicago Bears: best=17, worst=25
+  Carolina Panthers: best=12, worst=28
+  Detroit Lions: best=2, worst=23
+  Green Bay Packers: best=1, worst=8
+  Pittsburgh Steelers: best=3, worst=9
+  Jacksonville Jaguars: best=3, worst=16
+  Minnesota Vikings: best=8, worst=23
+  Baltimore Ravens: best=15, worst=23
+  Dallas Cowboys: best=22, worst=30
+  Washington Commanders: best=21, worst=31
+  Atlanta Falcons: best=8, worst=30
+  Arizona Cardinals: best=9, worst=26
+  Cincinnati Bengals: best=18, worst=32
+  Houston Texans: best=11, worst=21
+  New York Giants: best=26, worst=32
+  Miami Dolphins: best=15, worst=32
+  Cleveland Browns: best=18, worst=32
+  Las Vegas Raiders: best=18, worst=32
+  New Orleans Saints: best=21, worst=31
+  Tennessee Titans: best=13, worst=32
+  New York Jets: best=23, worst=32
+
+Completed best/worst computation in 69.0 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 16 ranking violations; Stage1 minimal = 16.
+Context: 16 / 135 non-tied games (11.85%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          11               26
+    2 Tampa Bay Buccaneers     6       2      0          2          15               20
+    3  San Francisco 49ers     6       3      0          3          23               21
+    4     Seattle Seahawks     6       2      0          1           7               20
+    5    Green Bay Packers     5       2      1          1           8               19
+    6  Pittsburgh Steelers     5       3      0          3           9               21
+    7     Los Angeles Rams     6       2      0          1          11               20
+    8   Indianapolis Colts     7       2      0          4          12               23
+    9 Los Angeles Chargers     6       3      0          5          15               22
+   10 Jacksonville Jaguars     5       3      0          3          16               21
+   11       Denver Broncos     8       2      0          6          20               21
+   12 New England Patriots     7       2      0          4          21               20
+   13      Atlanta Falcons     3       5      0          8          30               13
+   14        Buffalo Bills     6       2      0          1          19               17
+   15    Minnesota Vikings     4       4      0          8          23               15
+   16   Kansas City Chiefs     5       4      0         10          21               15
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
+C:\Users\robin\anaconda3\envs\collegefootball\Lib\site-packages\pulp\pulp.py:1489: UserWarning: Spaces are not permitted in the name. Converted to '_'
+  warnings.warn("Spaces are not permitted in the name. Converted to '_'")
+M	NFL-2025-26.html
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From https://github.com/rwheelus/wheelus-sports
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+[main 3cd3f19] NFL rankings updated for 2025 — 2025-11-10 07:23:25
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+To https://github.com/rwheelus/wheelus-sports.git
+   2a2c73b..3cd3f19  main -> main
+cbc found at: C:\Users\robin\anaconda3\envs\collegefootball\Library\bin\cbc.EXE
+Performing adjustment for year: 2025
+Loaded 32 teams and 147 non-tied games.
+
+Building Stage 1 ILP (minimize ranking violations with transitivity). This may take a moment...
+Stage 1 solver status: Optimal
+Stage 1 minimal violations found: 20
+
+Computing Best/Worst rank ranges for each team (this will run 2 ILP solves per team).
+  Denver Broncos: best=2, worst=15
+  New England Patriots: best=4, worst=11
+  Indianapolis Colts: best=1, worst=19
+  Seattle Seahawks: best=1, worst=7
+  Los Angeles Chargers: best=1, worst=10
+  Los Angeles Rams: best=1, worst=11
+  Philadelphia Eagles: best=1, worst=11
+  Chicago Bears: best=16, worst=25
+  Buffalo Bills: best=5, worst=12
+  San Francisco 49ers: best=15, worst=21
+  Detroit Lions: best=11, worst=14
+  Tampa Bay Buccaneers: best=12, worst=15
+  Pittsburgh Steelers: best=3, worst=9
+  Green Bay Packers: best=1, worst=8
+  Kansas City Chiefs: best=10, worst=13
+  Carolina Panthers: best=18, worst=24
+  Jacksonville Jaguars: best=3, worst=12
+  Houston Texans: best=14, worst=16
+  Minnesota Vikings: best=6, worst=30
+  Baltimore Ravens: best=15, worst=21
+  Miami Dolphins: best=20, worst=29
+  Atlanta Falcons: best=21, worst=30
+  Cincinnati Bengals: best=25, worst=31
+  Dallas Cowboys: best=22, worst=27
+  Arizona Cardinals: best=17, worst=22
+  Washington Commanders: best=25, worst=31
+  Cleveland Browns: best=26, worst=32
+  Las Vegas Raiders: best=18, worst=32
+  New York Giants: best=26, worst=32
+  New Orleans Saints: best=18, worst=31
+  New York Jets: best=24, worst=30
+  Tennessee Titans: best=16, worst=32
+
+Completed best/worst computation in 59.6 seconds (per-solve time_limit=60s).
+
+Building Stage 2 ILP (maximize transitive wins) constrained to Stage1 minimal violations...
+Stage2 solver status: Optimal
+
+Validation: final order has 20 ranking violations; Stage1 minimal = 20.
+Context: 20 / 147 non-tied games (13.61%)
+
+Final standings (top 16 shown):
+ Rank                 Team  Wins  Losses  Draws  Best Rank  Worst Rank  Transitive Wins
+    1  Philadelphia Eagles     6       2      0          1          11               27
+    2     Los Angeles Rams     7       2      0          1          11               30
+    3   Indianapolis Colts     8       2      0          1          19               28
+    4 Los Angeles Chargers     7       3      0          1          10               28
+    5     Seattle Seahawks     7       2      0          1           7               25
+    6    Green Bay Packers     5       2      1          1           8               20
+    7  Pittsburgh Steelers     5       4      0          3           9               24
+    8 New England Patriots     8       2      0          4          11               28
+    9       Denver Broncos     8       2      0          2          15               23
+   10 Jacksonville Jaguars     5       4      0          3          12               22
+   11        Buffalo Bills     6       3      0          5          12               21
+   12   Kansas City Chiefs     5       4      0         10          13               17
+   13        Detroit Lions     6       3      0         11          14               24
+   14 Tampa Bay Buccaneers     6       3      0         12          15               24
+   15       Houston Texans     4       5      0         14          16               16
+   16  San Francisco 49ers     6       4      0         15          21               24
+HTML file written to: C:\Users\robin\wheelus-sports\NFL-2025-26.html
+Site updated and pushed to GitHub successfully!
