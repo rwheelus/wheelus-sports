@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXB4LT3YBN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-MXB4LT3YBN');
+  </script>
+  <meta charset="utf-8">
+  <title>NHL Playoff Picture 2025-26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; padding: 24px; color: #111; }
+    .logo { display:block; margin-left:auto; margin-right:auto; width:70%; max-width:420px; height:auto; object-fit:contain; }
+    h1 { text-align:center; margin-top: 18px; }
+    .meta { text-align:center; margin-bottom: 8px; color: #333; }
+    .violations { text-align:center; margin-top: 8px; margin-bottom: 20px; font-weight:600; }
+    .table-wrap { max-width:1200px; margin: 0 auto; overflow-x:auto; padding-top:14px; }
+    table.ranking-table { border-collapse: collapse; width:100%; text-align:left; margin: 0 auto; }
+    table.ranking-table th, table.ranking-table td { padding: 8px 12px; border-bottom: 1px solid #e6e6e6; }
+    table.ranking-table th { background:#f8f8f8; font-weight:700; }
+    tr:nth-child(even) td { background: #fafafa; }
+    .footer { text-align:center; margin-top:24px; color:#666; font-size:0.95rem; }
+    a.home-link {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        color: #0073e6;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a.home-link:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img class="logo" src="images/cropped-wheelussportslogomain.png" alt="Wheelus Sports Logo">
+  
+  <!-- Return link -->
+  <a href="index.html" class="home-link">← Return to Homepage</a>
+  
+  <!-- Title -->
+  <h1>NHL Playoff Picture 2025-26</h1>
+  
+  <!-- Last updated / Violations -->
+  <div class="meta">Last Updated: 2026-04-10 13:41:14 Central Daylight Time</div>
+  
+  <!-- About Link -->
+  <div style="text-align: center; margin-bottom: 10px;">
+      (<a href="about-nhl-algorithm.html" class="about-link">About</a>)
+  </div>
+  
+  <div class="table-wrap">
+    <table class="dataframe ranking-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Team</th>
+      <th>Conference</th>
+      <th>Division</th>
+      <th>current_pts</th>
+      <th>mean_pts</th>
+      <th>p_D1</th>
+      <th>p_D2</th>
+      <th>p_D3</th>
+      <th>p_WC1</th>
+      <th>p_WC2</th>
+      <th>p_playoffs</th>
+      <th>p_R2</th>
+      <th>p_R3</th>
+      <th>p_Cup</th>
+      <th>p_Champion</th>
+      <th>p_presidents</th>
+      <th>mean_rank</th>
+      <th>pres_pct</th>
+      <th>wc2_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Colorado Avalanche</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>114</td>
+      <td>119.5000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.786</td>
+      <td>0.524</td>
+      <td>0.392</td>
+      <td>0.269</td>
+      <td>1.000</td>
+      <td>1.0000</td>
+      <td>94.100</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Carolina Hurricanes</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>108</td>
+      <td>111.4000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.604</td>
+      <td>0.369</td>
+      <td>0.204</td>
+      <td>0.102</td>
+      <td>0.001</td>
+      <td>2.4000</td>
+      <td>58.800</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Dallas Stars</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>106</td>
+      <td>109.6000</td>
+      <td>0.000</td>
+      <td>0.958</td>
+      <td>0.042</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.546</td>
+      <td>0.236</td>
+      <td>0.148</td>
+      <td>0.081</td>
+      <td>0.000</td>
+      <td>3.4000</td>
+      <td>52.900</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Buffalo Sabres</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>106</td>
+      <td>108.4000</td>
+      <td>0.676</td>
+      <td>0.244</td>
+      <td>0.080</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.524</td>
+      <td>0.255</td>
+      <td>0.130</td>
+      <td>0.057</td>
+      <td>0.000</td>
+      <td>4.1000</td>
+      <td>41.200</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Montreal Canadiens</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>104</td>
+      <td>107.5000</td>
+      <td>0.219</td>
+      <td>0.484</td>
+      <td>0.296</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.464</td>
+      <td>0.230</td>
+      <td>0.114</td>
+      <td>0.049</td>
+      <td>0.000</td>
+      <td>4.9000</td>
+      <td>41.200</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Tampa Bay Lightning</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>102</td>
+      <td>105.8000</td>
+      <td>0.104</td>
+      <td>0.271</td>
+      <td>0.624</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.564</td>
+      <td>0.326</td>
+      <td>0.186</td>
+      <td>0.093</td>
+      <td>0.000</td>
+      <td>6.1000</td>
+      <td>29.400</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Minnesota Wild</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>102</td>
+      <td>105.7000</td>
+      <td>0.000</td>
+      <td>0.042</td>
+      <td>0.958</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.454</td>
+      <td>0.172</td>
+      <td>0.102</td>
+      <td>0.050</td>
+      <td>0.000</td>
+      <td>6.2000</td>
+      <td>29.400</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Pittsburgh Penguins</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>98</td>
+      <td>101.6000</td>
+      <td>0.000</td>
+      <td>0.995</td>
+      <td>0.005</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.602</td>
+      <td>0.281</td>
+      <td>0.132</td>
+      <td>0.059</td>
+      <td>0.000</td>
+      <td>8.2000</td>
+      <td>17.600</td>
+      <td>100.000</td>
+    </tr>
+    <tr>
+      <td>Boston Bruins</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>96</td>
+      <td>99.5000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.786</td>
+      <td>0.204</td>
+      <td>0.990</td>
+      <td>0.436</td>
+      <td>0.195</td>
+      <td>0.092</td>
+      <td>0.039</td>
+      <td>0.000</td>
+      <td>9.1000</td>
+      <td>17.600</td>
+      <td>94.100</td>
+    </tr>
+    <tr>
+      <td>Ottawa Senators</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>94</td>
+      <td>97.6000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.209</td>
+      <td>0.681</td>
+      <td>0.890</td>
+      <td>0.368</td>
+      <td>0.178</td>
+      <td>0.078</td>
+      <td>0.032</td>
+      <td>0.000</td>
+      <td>10.3000</td>
+      <td>0.000</td>
+      <td>94.100</td>
+    </tr>
+    <tr>
+      <td>Philadelphia Flyers</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>92</td>
+      <td>95.3000</td>
+      <td>0.000</td>
+      <td>0.005</td>
+      <td>0.528</td>
+      <td>0.000</td>
+      <td>0.012</td>
+      <td>0.545</td>
+      <td>0.223</td>
+      <td>0.089</td>
+      <td>0.036</td>
+      <td>0.014</td>
+      <td>0.000</td>
+      <td>12.6000</td>
+      <td>0.000</td>
+      <td>76.500</td>
+    </tr>
+    <tr>
+      <td>Utah Mammoth</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>90</td>
+      <td>95.1000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.996</td>
+      <td>0.004</td>
+      <td>1.000</td>
+      <td>0.601</td>
+      <td>0.380</td>
+      <td>0.146</td>
+      <td>0.068</td>
+      <td>0.000</td>
+      <td>13.0000</td>
+      <td>0.000</td>
+      <td>58.800</td>
+    </tr>
+    <tr>
+      <td>New York Islanders</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>91</td>
+      <td>94.2000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.329</td>
+      <td>0.001</td>
+      <td>0.027</td>
+      <td>0.357</td>
+      <td>0.134</td>
+      <td>0.046</td>
+      <td>0.017</td>
+      <td>0.006</td>
+      <td>0.000</td>
+      <td>14.1000</td>
+      <td>0.000</td>
+      <td>58.800</td>
+    </tr>
+    <tr>
+      <td>Detroit Red Wings</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>91</td>
+      <td>94.2000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.004</td>
+      <td>0.069</td>
+      <td>0.073</td>
+      <td>0.023</td>
+      <td>0.009</td>
+      <td>0.003</td>
+      <td>0.001</td>
+      <td>0.000</td>
+      <td>14.1000</td>
+      <td>0.000</td>
+      <td>58.800</td>
+    </tr>
+    <tr>
+      <td>Edmonton Oilers</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>90</td>
+      <td>93.6000</td>
+      <td>0.560</td>
+      <td>0.279</td>
+      <td>0.133</td>
+      <td>0.000</td>
+      <td>0.026</td>
+      <td>0.999</td>
+      <td>0.473</td>
+      <td>0.241</td>
+      <td>0.077</td>
+      <td>0.030</td>
+      <td>0.000</td>
+      <td>15.0000</td>
+      <td>0.000</td>
+      <td>41.200</td>
+    </tr>
+    <tr>
+      <td>Columbus Blue Jackets</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>90</td>
+      <td>93.3000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.103</td>
+      <td>0.000</td>
+      <td>0.004</td>
+      <td>0.107</td>
+      <td>0.043</td>
+      <td>0.017</td>
+      <td>0.006</td>
+      <td>0.002</td>
+      <td>0.000</td>
+      <td>15.4000</td>
+      <td>0.000</td>
+      <td>41.200</td>
+    </tr>
+    <tr>
+      <td>Vegas Golden Knights</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>89</td>
+      <td>92.3000</td>
+      <td>0.154</td>
+      <td>0.318</td>
+      <td>0.457</td>
+      <td>0.001</td>
+      <td>0.054</td>
+      <td>0.985</td>
+      <td>0.498</td>
+      <td>0.218</td>
+      <td>0.068</td>
+      <td>0.026</td>
+      <td>0.000</td>
+      <td>16.8000</td>
+      <td>0.000</td>
+      <td>29.400</td>
+    </tr>
+    <tr>
+      <td>Anaheim Ducks</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>89</td>
+      <td>92.3000</td>
+      <td>0.278</td>
+      <td>0.367</td>
+      <td>0.301</td>
+      <td>0.001</td>
+      <td>0.048</td>
+      <td>0.993</td>
+      <td>0.392</td>
+      <td>0.149</td>
+      <td>0.038</td>
+      <td>0.012</td>
+      <td>0.000</td>
+      <td>16.9000</td>
+      <td>0.000</td>
+      <td>29.400</td>
+    </tr>
+    <tr>
+      <td>Washington Capitals</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>89</td>
+      <td>92.1000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.035</td>
+      <td>0.000</td>
+      <td>0.003</td>
+      <td>0.038</td>
+      <td>0.015</td>
+      <td>0.006</td>
+      <td>0.002</td>
+      <td>0.001</td>
+      <td>0.000</td>
+      <td>17.1000</td>
+      <td>0.000</td>
+      <td>29.400</td>
+    </tr>
+    <tr>
+      <td>Los Angeles Kings</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>85</td>
+      <td>89.4000</td>
+      <td>0.008</td>
+      <td>0.036</td>
+      <td>0.107</td>
+      <td>0.003</td>
+      <td>0.471</td>
+      <td>0.625</td>
+      <td>0.160</td>
+      <td>0.051</td>
+      <td>0.016</td>
+      <td>0.005</td>
+      <td>0.000</td>
+      <td>19.9000</td>
+      <td>0.000</td>
+      <td>5.900</td>
+    </tr>
+    <tr>
+      <td>Nashville Predators</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>84</td>
+      <td>87.7000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.266</td>
+      <td>0.266</td>
+      <td>0.060</td>
+      <td>0.021</td>
+      <td>0.009</td>
+      <td>0.004</td>
+      <td>0.000</td>
+      <td>21.4000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Winnipeg Jets</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>82</td>
+      <td>86.3000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.080</td>
+      <td>0.080</td>
+      <td>0.018</td>
+      <td>0.006</td>
+      <td>0.003</td>
+      <td>0.001</td>
+      <td>0.000</td>
+      <td>22.5000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>New Jersey Devils</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>83</td>
+      <td>86.0000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>22.7000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>San Jose Sharks</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>81</td>
+      <td>85.3000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.001</td>
+      <td>0.000</td>
+      <td>0.051</td>
+      <td>0.052</td>
+      <td>0.011</td>
+      <td>0.003</td>
+      <td>0.001</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>23.2000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>St. Louis Blues</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>78</td>
+      <td>82.1000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>25.9000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Florida Panthers</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>78</td>
+      <td>81.3000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>26.6000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Seattle Kraken</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>77</td>
+      <td>81.1000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>26.8000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Toronto Maple Leafs</td>
+      <td>E</td>
+      <td>Atlantic</td>
+      <td>78</td>
+      <td>81.0000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>26.8000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>New York Rangers</td>
+      <td>E</td>
+      <td>Metropolitan</td>
+      <td>75</td>
+      <td>77.9000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>29.0000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Calgary Flames</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>73</td>
+      <td>77.1000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>29.5000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Chicago Blackhawks</td>
+      <td>W</td>
+      <td>Central</td>
+      <td>70</td>
+      <td>73.2000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>30.9000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>Vancouver Canucks</td>
+      <td>W</td>
+      <td>Pacific</td>
+      <td>52</td>
+      <td>55.4000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+      <td>32.0000</td>
+      <td>0.000</td>
+      <td>0.000</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  
+  <!-- Last updated / Violations -->
+  <div class="meta">Game result data thanks to the NHL API.</div>
+  
+  <div class="footer">
+    Generated by Wheelus Sports statistics engine — data snapshot for season 2025.<br>
+  </div>
+</body>
+</html>
