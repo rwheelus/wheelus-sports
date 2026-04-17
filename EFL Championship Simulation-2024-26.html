@@ -1,0 +1,1336 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXB4LT3YBN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-MXB4LT3YBN');
+    </script>    
+    <meta charset="UTF-8">
+        <style>
+            body { 
+                font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+                background-color: #f4f4f4; 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                margin: 0; 
+                padding: 40px 20px; 
+                color: #333;
+            }
+            .content-wrapper { max-width: 1100px; width: 100%; }
+            .logo { display:block; margin-left:auto; margin-right:auto; width:70%; max-width:420px; height:auto; object-fit:contain; }
+            a.home-link {
+                display: block;
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 25px;
+                color: #0073e6;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            a.home-link:hover {
+                text-decoration: underline;
+            }
+            .footer { text-align:center; margin-top:24px; color:#666; font-size:0.95rem; }
+            h1 { text-align: center; font-size: 2rem; margin-bottom: 30px; color: #1a1a1a; }
+            
+            /* League Table */
+            .league-table { 
+                border-collapse: collapse; 
+                width: 100%; 
+                background: white; 
+                margin-bottom: 60px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .league-table th { background: #2c3e50; color: white; padding: 12px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+            .league-table td { padding: 10px; border: 1px solid #eee; text-align: center; }
+            
+            /* Game Impact Cards */
+            .game-card { 
+                background: white; 
+                padding: 20px; 
+                margin-bottom: 20px; 
+                border-radius: 8px; 
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                border-left: 5px solid #2c3e50;
+            }
+            .game-header { 
+                display: flex; 
+                align-items: center; 
+                margin-bottom: 15px; 
+                border-bottom: 1px solid #f0f0f0; 
+                padding-bottom: 10px;
+            }
+            .game-rank { background: #2c3e50; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin-right: 15px; }
+            .game-title { font-size: 1.2rem; font-weight: bold; flex-grow: 1; }
+            .game-date { color: #777; margin-right: 20px; font-size: 0.9rem; }
+            .impact-badge { background: #e8f4fd; color: #2b6cb0; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+            
+            .impact-sub-table { width: 100%; border-collapse: collapse; font-family: 'Roboto Mono', monospace; font-size: 0.95rem; }
+            .impact-sub-table th { text-align: left; color: #888; font-size: 0.75rem; text-transform: uppercase; padding-bottom: 8px; }
+            .impact-sub-table td { padding: 6px 0; border-bottom: 1px solid #fafafa; }
+            .team-name-cell { font-family: sans-serif; font-weight: bold; color: #1a1a1a; }
+            
+            hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
+        </style>
+    </head>
+    <body>
+        <!-- Logo -->
+        <img class="logo" src="images/Wheelus Sports Logo - Gray.png" alt="Wheelus Sports Logo">
+        
+        <!-- Return link -->
+        <a href="index.html" class="home-link">&larr; Return to Homepage</a>
+        
+        <!-- Title -->
+        <h1>Championship League Table Projections</h1>
+        
+        <!-- Last updated -->
+        <div class="meta">Last Updated: 2026-04-17 14:38:06 Central Daylight Time</div>
+        
+        <div class="content-wrapper">
+            <h1>Championship League Table Projections</h1>
+            
+    <table class="league-table">
+        <thead><tr><th>Pos</th><th>Team</th><th>Pts</th><th>Raw_GD</th><th>GF</th><th>W</th><th>GP</th><th>Mean_Pts</th><th>P_Top2</th><th>P_Playoff</th><th>P_PO_Final</th><th>P_PO_Promotion</th><th>P_Relegation</th></tr></thead>
+        <tbody><tr style='background-color: #70AD47; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>1</td><td>Coventry City</td><td>84</td><td>42</td><td>84</td><td>25</td><td>41</td><td>91.0</td><td>100.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: #70AD47; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>2</td><td>Ipswich Town</td><td>72</td><td>29</td><td>69</td><td>20</td><td>39</td><td>80.6</td><td>54.7</td><td>45.1</td><td>30.3</td><td>18.6</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>3</td><td>Middlesbrough</td><td>72</td><td>21</td><td>62</td><td>20</td><td>41</td><td>78.6</td><td>21.3</td><td>77.9</td><td>46.4</td><td>25.0</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>4</td><td>Millwall</td><td>72</td><td>9</td><td>56</td><td>21</td><td>41</td><td>78.9</td><td>19.2</td><td>79.7</td><td>37.9</td><td>16.7</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>5</td><td>Hull City</td><td>68</td><td>5</td><td>63</td><td>20</td><td>41</td><td>75.2</td><td>2.1</td><td>83.5</td><td>29.9</td><td>11.9</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>6</td><td>Southampton</td><td>66</td><td>19</td><td>68</td><td>18</td><td>40</td><td>74.5</td><td>2.7</td><td>79.1</td><td>41.6</td><td>22.1</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>7</td><td>Wrexham</td><td>64</td><td>5</td><td>63</td><td>17</td><td>41</td><td>70.0</td><td>0.0</td><td>15.2</td><td>5.8</td><td>2.3</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>8</td><td>Derby County</td><td>63</td><td>9</td><td>60</td><td>18</td><td>41</td><td>69.9</td><td>0.0</td><td>18.4</td><td>7.6</td><td>3.2</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>9</td><td>Norwich City</td><td>58</td><td>7</td><td>55</td><td>17</td><td>41</td><td>64.8</td><td>0.0</td><td>0.8</td><td>0.3</td><td>0.1</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>10</td><td>Watford</td><td>57</td><td>3</td><td>52</td><td>14</td><td>41</td><td>63.3</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>11</td><td>Bristol City</td><td>57</td><td>1</td><td>52</td><td>16</td><td>41</td><td>63.5</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>12</td><td>QPR</td><td>57</td><td>-5</td><td>58</td><td>16</td><td>41</td><td>63.5</td><td>0.0</td><td>0.1</td><td>0.1</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>13</td><td>Stoke City</td><td>54</td><td>3</td><td>48</td><td>15</td><td>41</td><td>61.3</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>14</td><td>Preston North End</td><td>54</td><td>-4</td><td>48</td><td>13</td><td>41</td><td>60.1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>15</td><td>Swansea City</td><td>54</td><td>-5</td><td>49</td><td>15</td><td>41</td><td>60.7</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>16</td><td>Birmingham City</td><td>53</td><td>-3</td><td>49</td><td>14</td><td>41</td><td>60.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>17</td><td>Sheffield United</td><td>51</td><td>-1</td><td>57</td><td>15</td><td>41</td><td>57.9</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.3</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>18</td><td>Charlton Athletic</td><td>49</td><td>-11</td><td>38</td><td>12</td><td>41</td><td>56.5</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>2.6</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>19</td><td>Leicester City</td><td>47</td><td>-9</td><td>54</td><td>11</td><td>41</td><td>53.7</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>13.5</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>20</td><td>Blackburn Rovers</td><td>47</td><td>-12</td><td>37</td><td>12</td><td>41</td><td>53.7</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>15.1</td></tr><tr style='background-color: #F6BE98; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>21</td><td>West Brom</td><td>45</td><td>-14</td><td>42</td><td>11</td><td>41</td><td>52.5</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>25.8</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>22</td><td>Portsmouth</td><td>42</td><td>-17</td><td>40</td><td>10</td><td>40</td><td>50.5</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>60.5</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>23</td><td>Oxford United</td><td>41</td><td>-15</td><td>39</td><td>9</td><td>41</td><td>48.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>82.2</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>24</td><td>Sheffield Weds</td><td>13</td><td>-57</td><td>25</td><td>1</td><td>41</td><td>20.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>100.0</td></tr></tbody>
+    </table>
+    
+            
+            <hr>
+            
+            <h1>High Impact Matchups</h1>
+            
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#1</span>
+                <span class="game-title">Portsmouth <small>vs</small> Leicester City</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">55.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Portsmouth</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  43% / Loss  79%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Leicester City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   2% / Loss  20%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#2</span>
+                <span class="game-title">Derby County <small>vs</small> Oxford United</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">47.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Derby County</td>
+                    <td>Win  27% / Draw  13% / Loss   8%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Oxford United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  63% / Loss  91%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#3</span>
+                <span class="game-title">Oxford United <small>vs</small> Wrexham</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">47.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Oxford United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  72% / Loss  96%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Wrexham</td>
+                    <td>Win  31% / Draw  15% / Loss   7%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#4</span>
+                <span class="game-title">Blackburn Rovers <small>vs</small> Leicester City</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">42.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Blackburn Rovers</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   4% / Loss  26%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Leicester City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   4% / Loss  25%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#5</span>
+                <span class="game-title">Coventry City <small>vs</small> Portsmouth</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">34.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Coventry City</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Portsmouth</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  38% / Loss  72%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#6</span>
+                <span class="game-title">Millwall <small>vs</small> Oxford United</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">33.6 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Millwall</td>
+                    <td>Win 100% / Draw  99% / Loss  97%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Oxford United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  61% / Loss  91%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#7</span>
+                <span class="game-title">Stoke City <small>vs</small> Portsmouth</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">33.6 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Stoke City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Portsmouth</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  37% / Loss  71%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#8</span>
+                <span class="game-title">West Brom <small>vs</small> Watford</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">32.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">West Brom</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  14% / Loss  46%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Watford</td>
+                    <td>Win   1% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#9</span>
+                <span class="game-title">Portsmouth <small>vs</small> Birmingham City</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">31.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Portsmouth</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  51% / Loss  83%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Birmingham City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#10</span>
+                <span class="game-title">Leicester City <small>vs</small> Hull City</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">31.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Leicester City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   3% / Loss  18%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Hull City</td>
+                    <td>Win  94% / Draw  87% / Loss  78%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#11</span>
+                <span class="game-title">West Brom <small>vs</small> Ipswich Town</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">30.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">West Brom</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  11% / Loss  41%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Ipswich Town</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#12</span>
+                <span class="game-title">Preston North End <small>vs</small> West Brom</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">29.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Preston North End</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">West Brom</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  10% / Loss  40%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#13</span>
+                <span class="game-title">Hull City <small>vs</small> Birmingham City</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">26.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Hull City</td>
+                    <td>Win  94% / Draw  79% / Loss  68%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Birmingham City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#14</span>
+                <span class="game-title">Coventry City <small>vs</small> Wrexham</span>
+                <span class="game-date">04/26/2026</span>
+                <span class="impact-badge">25.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Coventry City</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Wrexham</td>
+                    <td>Win  32% / Draw  11% / Loss   6%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#15</span>
+                <span class="game-title">Charlton Athletic <small>vs</small> Hull City</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">25.6 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Charlton Athletic</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   5%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Hull City</td>
+                    <td>Win  96% / Draw  83% / Loss  74%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#16</span>
+                <span class="game-title">Hull City <small>vs</small> Norwich City</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">25.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Hull City</td>
+                    <td>Win  95% / Draw  82% / Loss  72%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Norwich City</td>
+                    <td>Win   2% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#17</span>
+                <span class="game-title">Norwich City <small>vs</small> Derby County</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">23.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Norwich City</td>
+                    <td>Win   1% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Derby County</td>
+                    <td>Win  33% / Draw  15% / Loss  10%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#18</span>
+                <span class="game-title">Sheffield Weds <small>vs</small> West Brom</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">23.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield Weds</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win 100% / Loss 100%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">West Brom</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  11% / Loss  34%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#19</span>
+                <span class="game-title">Oxford United <small>vs</small> Sheffield Weds</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">23.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Oxford United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win  72% / Loss  95%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield Weds</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win 100% / Loss 100%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#20</span>
+                <span class="game-title">Southampton <small>vs</small> Ipswich Town</span>
+                <span class="game-date">04/28/2026</span>
+                <span class="impact-badge">22.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Southampton</td>
+                    <td>Win  92% / Draw  76% / Loss  69%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Ipswich Town</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#21</span>
+                <span class="game-title">Blackburn Rovers <small>vs</small> Coventry City</span>
+                <span class="game-date">04/17/2026</span>
+                <span class="impact-badge">21.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Blackburn Rovers</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   5% / Loss  26%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Coventry City</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#22</span>
+                <span class="game-title">QPR <small>vs</small> Derby County</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">21.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">QPR</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Derby County</td>
+                    <td>Win  32% / Draw  15% / Loss  10%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#23</span>
+                <span class="game-title">Wrexham <small>vs</small> Stoke City</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">21.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Wrexham</td>
+                    <td>Win  28% / Draw   9% / Loss   7%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Stoke City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#24</span>
+                <span class="game-title">Wrexham <small>vs</small> Middlesbrough</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">21.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Wrexham</td>
+                    <td>Win  25% / Draw   9% / Loss   4%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Middlesbrough</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#25</span>
+                <span class="game-title">Swansea City <small>vs</small> Southampton</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">21.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Swansea City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Southampton</td>
+                    <td>Win  93% / Draw  81% / Loss  72%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#26</span>
+                <span class="game-title">Southampton <small>vs</small> Bristol City</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">21.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Southampton</td>
+                    <td>Win  92% / Draw  81% / Loss  72%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Bristol City</td>
+                    <td>Win   1% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#27</span>
+                <span class="game-title">Derby County <small>vs</small> Sheffield United</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">20.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Derby County</td>
+                    <td>Win  31% / Draw  14% / Loss  10%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#28</span>
+                <span class="game-title">Sheffield United <small>vs</small> Blackburn Rovers</span>
+                <span class="game-date">04/22/2026</span>
+                <span class="impact-badge">20.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   1%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Blackburn Rovers</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   4% / Loss  24%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#29</span>
+                <span class="game-title">Preston North End <small>vs</small> Southampton</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">19.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Preston North End</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Southampton</td>
+                    <td>Win  91% / Draw  81% / Loss  71%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#30</span>
+                <span class="game-title">Leicester City <small>vs</small> Millwall</span>
+                <span class="game-date">04/24/2026</span>
+                <span class="impact-badge">18.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Leicester City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   3% / Loss  20%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Millwall</td>
+                    <td>Win 100% / Draw  99% / Loss  99%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#31</span>
+                <span class="game-title">Charlton Athletic <small>vs</small> Ipswich Town</span>
+                <span class="game-date">04/22/2026</span>
+                <span class="impact-badge">4.6 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Charlton Athletic</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   1% / Loss   5%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Ipswich Town</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#32</span>
+                <span class="game-title">Sheffield Weds <small>vs</small> Charlton Athletic</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">4.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield Weds</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win 100% / Loss 100%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Charlton Athletic</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   5%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#33</span>
+                <span class="game-title">Swansea City <small>vs</small> Charlton Athletic</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">3.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Swansea City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Charlton Athletic</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   4%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#34</span>
+                <span class="game-title">Norwich City <small>vs</small> Swansea City</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">3.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Norwich City</td>
+                    <td>Win   3% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Swansea City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#35</span>
+                <span class="game-title">Millwall <small>vs</small> QPR</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">3.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Millwall</td>
+                    <td>Win 100% / Draw  98% / Loss  97%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">QPR</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#36</span>
+                <span class="game-title">Ipswich Town <small>vs</small> Middlesbrough</span>
+                <span class="game-date">04/19/2026</span>
+                <span class="impact-badge">2.8 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Ipswich Town</td>
+                    <td>Win 100% / Draw 100% / Loss  99%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Middlesbrough</td>
+                    <td>Win 100% / Draw 100% / Loss  98%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#37</span>
+                <span class="game-title">Middlesbrough <small>vs</small> Watford</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">2.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Middlesbrough</td>
+                    <td>Win 100% / Draw  99% / Loss  98%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Watford</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#38</span>
+                <span class="game-title">Stoke City <small>vs</small> Millwall</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">2.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Stoke City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Millwall</td>
+                    <td>Win 100% / Draw  99% / Loss  98%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#39</span>
+                <span class="game-title">Middlesbrough <small>vs</small> Sheffield Weds</span>
+                <span class="game-date">04/22/2026</span>
+                <span class="impact-badge">2.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Middlesbrough</td>
+                    <td>Win 100% / Draw 100% / Loss  98%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield Weds</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win 100% / Loss 100%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#40</span>
+                <span class="game-title">Watford <small>vs</small> Sheffield United</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">1.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Watford</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   1%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#41</span>
+                <span class="game-title">Bristol City <small>vs</small> Norwich City</span>
+                <span class="game-date">04/18/2026</span>
+                <span class="impact-badge">1.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Bristol City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Norwich City</td>
+                    <td>Win   1% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#42</span>
+                <span class="game-title">Sheffield United <small>vs</small> Preston North End</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">1.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Sheffield United</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   1%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Preston North End</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#43</span>
+                <span class="game-title">Ipswich Town <small>vs</small> QPR</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">1.0 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Ipswich Town</td>
+                    <td>Win 100% / Draw 100% / Loss  99%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">QPR</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#44</span>
+                <span class="game-title">Birmingham City <small>vs</small> Bristol City</span>
+                <span class="game-date">04/25/2026</span>
+                <span class="impact-badge">0.6 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Birmingham City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Bristol City</td>
+                    <td>Win   1% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#45</span>
+                <span class="game-title">QPR <small>vs</small> Swansea City</span>
+                <span class="game-date">04/21/2026</span>
+                <span class="impact-badge">0.4 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">QPR</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Swansea City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#46</span>
+                <span class="game-title">Bristol City <small>vs</small> Stoke City</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">0.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Bristol City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Stoke City</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-rank">#47</span>
+                <span class="game-title">Watford <small>vs</small> Coventry City</span>
+                <span class="game-date">05/02/2026</span>
+                <span class="impact-badge">0.2 pp impact</span>
+            </div>
+            <table class="impact-sub-table">
+                <tr>
+                    <th style="text-align:left; width: 180px;">Team</th>
+                    <th>Promo (W/D/L)</th>
+                    <th>Relg (W/L)</th>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Watford</td>
+                    <td>Win   0% / Draw   0% / Loss   0%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+                <tr>
+                    <td class="team-name-cell">Coventry City</td>
+                    <td>Win 100% / Draw 100% / Loss 100%</td>
+                    <td>Win   0% / Loss   0%</td>
+                </tr>
+            </table>
+        </div>
+        
+        </div>
+    </body>
+    </html>
+    
