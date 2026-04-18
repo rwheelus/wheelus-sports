@@ -4,50 +4,160 @@
     <meta charset="UTF-8">
     <title>EFL Championship 2025/2026 Projections</title>
     <style>
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5;
-               display: flex; flex-direction: column; align-items: center; margin: 0; padding: 40px 20px; color: #333; }
-        .content-wrapper { max-width: 1100px; width: 100%; }
-        .logo { display:block; margin-left:auto; margin-right:auto; width:70%; max-width:420px; height:auto; object-fit:contain; }
-        a.home-link { display: block; text-align: center; margin-top: 15px; margin-bottom: 25px;
-                       color: #0073e6; font-weight: bold; text-decoration: none; }
+        /* ── Base layout: centred column, works on all viewport widths ── */
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+            /* centre everything in the viewport */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;          /* centres inline/text children by default */
+        }
+        /* The single content column – never wider than 1100 px, always centred */
+        .content-wrapper {
+            max-width: 1100px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;            /* restore left-align inside cards/tables */
+        }
+        /* Logo */
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            max-width: 420px;
+            height: auto;
+            object-fit: contain;
+        }
+        /* Nav link */
+        a.home-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            color: #0073e6;
+            font-weight: bold;
+            text-decoration: none;
+            width: 100%;
+        }
         a.home-link:hover { text-decoration: underline; }
-        .footer { text-align:center; margin-top:24px; color:#666; font-size:0.95rem; }
-        h1 { text-align: center; font-size: 2rem; margin-bottom: 30px; color: #1a1a1a; }
-        .league-table { border-collapse: collapse; width: 100%; background: white; margin-bottom: 60px;
-                         box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;
-                         margin-left: auto; margin-right: auto; }
-        .league-table th { background: #2c3e50; color: white; padding: 12px; text-transform: uppercase;
-                            font-size: 0.85rem; letter-spacing: 1px; }
+        /* Page headings */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            width: 100%;
+        }
+        /* Meta / footer lines */
+        .meta   { text-align: center; margin-bottom: 8px; color: #333; width: 100%; }
+        .footer { text-align: center; margin-top: 24px; color: #666; font-size: 0.95rem; width: 100%; }
+        hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
+        /* ── League table ── */
+        .table-scroll {
+            width: 100%;
+            overflow-x: auto;            /* horizontal scroll on narrow screens */
+            -webkit-overflow-scrolling: touch;
+        }
+        .league-table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 640px;            /* prevents ugly wrap on very narrow phones */
+            background: white;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .league-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
         .league-table td { padding: 10px; border: 1px solid #eee; text-align: center; }
-        .game-card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px;
-                      box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2c3e50; }
-        .game-header { display: flex; align-items: center; margin-bottom: 15px;
-                        border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
-        .game-rank { background: #2c3e50; color: white; padding: 2px 8px; border-radius: 4px;
-                      font-weight: bold; margin-right: 15px; }
-        .game-title { font-size: 1.2rem; font-weight: bold; flex-grow: 1; }
-        .game-date { color: #777; margin-right: 20px; font-size: 0.9rem; }
-        .impact-badge { background: #e8f4fd; color: #2b6cb0; padding: 4px 12px; border-radius: 20px;
-                         font-weight: bold; font-size: 0.9rem; }
-        .impact-sub-table { width: 100%; border-collapse: collapse; font-family: 'Roboto Mono', monospace; font-size: 0.95rem; }
-        .impact-sub-table th { text-align: left; color: #888; font-size: 0.75rem; text-transform: uppercase; padding-bottom: 8px; }
+        /* ── Impact cards ── */
+        .game-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid #2c3e50;
+            text-align: left;            /* card content stays left-aligned */
+        }
+        .game-header {
+            display: flex;
+            flex-wrap: wrap;             /* wraps on narrow screens */
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .game-rank {
+            background: #2c3e50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .game-title  { font-size: 1.1rem; font-weight: bold; flex-grow: 1; }
+        .game-date   { color: #777; font-size: 0.9rem; }
+        .impact-badge {
+            background: #e8f4fd;
+            color: #2b6cb0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        .impact-sub-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+        }
+        .impact-sub-table th {
+            text-align: left;
+            color: #888;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+        }
         .impact-sub-table td { padding: 6px 0; border-bottom: 1px solid #fafafa; }
         .team-name-cell { font-family: sans-serif; font-weight: bold; color: #1a1a1a; }
-        hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
-        .meta { text-align:center; margin-bottom: 8px; color: #333; }
+        /* ── Mobile tweaks ── */
+        @media (max-width: 600px) {
+            body { padding: 20px 12px; }
+            h1   { font-size: 1.4rem; }
+            .game-card { padding: 14px; }
+            .game-title { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
     <img class="logo" src="images/Wheelus Sports Logo - Gray.png" alt="Wheelus Sports Logo">
     <a href="index.html" class="home-link">&larr; Return to Homepage</a>
     <h1>EFL Championship 2025/2026 Projections</h1>
-    <div class="meta">Last Updated: 2026-04-18 13:37:55</div>
+    <div class="meta">Last Updated: 2026-04-18 15:14:40</div>
     <div class="content-wrapper">
         
-    <table class="league-table">
-        <thead><tr><th>Pos</th><th>Team</th><th>Pts</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>Pts/MP</th><th>GF</th><th>GA</th><th>GD</th><th>Simulation Mean Pts</th><th>P_Top2</th><th>P_Playoff</th><th>P_PO_Final</th><th>P_PO_Promotion</th><th>P_Promotion (Overall)</th><th>P_Relegation</th></tr></thead>
-        <tbody><tr style='background-color: #70AD47; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>1</td><td>Coventry City</td><td>85</td><td>42</td><td>25</td><td>10</td><td>7</td><td>2.0</td><td>84</td><td>42</td><td>42</td><td>90.8</td><td>100.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>100.0</td><td>0.0</td></tr><tr style='background-color: #70AD47; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>2</td><td>Ipswich Town</td><td>75</td><td>41</td><td>21</td><td>12</td><td>8</td><td>1.8</td><td>71</td><td>42</td><td>29</td><td>81.7</td><td>72.1</td><td>27.9</td><td>18.6</td><td>11.6</td><td>83.7</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>3</td><td>Millwall</td><td>73</td><td>42</td><td>21</td><td>10</td><td>11</td><td>1.7</td><td>56</td><td>47</td><td>9</td><td>78.6</td><td>11.7</td><td>88.0</td><td>39.5</td><td>17.9</td><td>29.6</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>4</td><td>Southampton</td><td>72</td><td>42</td><td>20</td><td>12</td><td>10</td><td>1.7</td><td>73</td><td>50</td><td>23</td><td>77.6</td><td>10.1</td><td>89.5</td><td>52.4</td><td>29.0</td><td>39.1</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>5</td><td>Middlesbrough</td><td>72</td><td>42</td><td>20</td><td>12</td><td>10</td><td>1.7</td><td>62</td><td>42</td><td>20</td><td>76.9</td><td>5.8</td><td>93.0</td><td>51.6</td><td>26.5</td><td>32.3</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>6</td><td>Hull City</td><td>68</td><td>42</td><td>20</td><td>8</td><td>14</td><td>1.6</td><td>64</td><td>60</td><td>4</td><td>74.0</td><td>0.3</td><td>82.8</td><td>30.5</td><td>12.0</td><td>12.3</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>7</td><td>Wrexham</td><td>64</td><td>42</td><td>17</td><td>13</td><td>12</td><td>1.5</td><td>63</td><td>60</td><td>3</td><td>69.3</td><td>0.0</td><td>11.0</td><td>4.2</td><td>1.6</td><td>1.6</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>8</td><td>Derby County</td><td>63</td><td>42</td><td>18</td><td>9</td><td>15</td><td>1.5</td><td>61</td><td>53</td><td>8</td><td>68.6</td><td>0.0</td><td>7.6</td><td>3.1</td><td>1.4</td><td>1.4</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>9</td><td>Norwich City</td><td>58</td><td>42</td><td>17</td><td>7</td><td>18</td><td>1.4</td><td>55</td><td>50</td><td>5</td><td>63.2</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>10</td><td>Bristol City</td><td>58</td><td>42</td><td>16</td><td>10</td><td>16</td><td>1.4</td><td>52</td><td>51</td><td>1</td><td>63.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>11</td><td>QPR</td><td>58</td><td>42</td><td>16</td><td>10</td><td>16</td><td>1.4</td><td>58</td><td>63</td><td>-5</td><td>63.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>12</td><td>Watford</td><td>57</td><td>42</td><td>14</td><td>15</td><td>13</td><td>1.4</td><td>52</td><td>51</td><td>1</td><td>62.1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>13</td><td>Preston North End</td><td>57</td><td>42</td><td>14</td><td>15</td><td>13</td><td>1.4</td><td>50</td><td>53</td><td>-3</td><td>61.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>14</td><td>Swansea City</td><td>57</td><td>42</td><td>16</td><td>9</td><td>17</td><td>1.4</td><td>50</td><td>54</td><td>-4</td><td>62.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>15</td><td>Birmingham City</td><td>56</td><td>42</td><td>15</td><td>11</td><td>16</td><td>1.3</td><td>51</td><td>52</td><td>-1</td><td>61.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>16</td><td>Stoke City</td><td>55</td><td>42</td><td>15</td><td>10</td><td>17</td><td>1.3</td><td>49</td><td>46</td><td>3</td><td>60.9</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>17</td><td>Sheffield United</td><td>54</td><td>42</td><td>16</td><td>6</td><td>20</td><td>1.3</td><td>59</td><td>59</td><td>0</td><td>59.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>18</td><td>Charlton Athletic</td><td>49</td><td>42</td><td>12</td><td>13</td><td>17</td><td>1.2</td><td>39</td><td>51</td><td>-12</td><td>54.5</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>7.6</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>19</td><td>Portsmouth</td><td>48</td><td>42</td><td>12</td><td>12</td><td>18</td><td>1.1</td><td>43</td><td>57</td><td>-14</td><td>54.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>14.3</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>20</td><td>Blackburn Rovers</td><td>48</td><td>43</td><td>12</td><td>12</td><td>19</td><td>1.1</td><td>38</td><td>53</td><td>-15</td><td>51.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>41.8</td></tr><tr style='background-color: #F6BE98; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>21</td><td>Leicester City</td><td>47</td><td>42</td><td>11</td><td>14</td><td>17</td><td>1.1</td><td>54</td><td>64</td><td>-10</td><td>52.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>28.3</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>22</td><td>West Brom</td><td>46</td><td>42</td><td>11</td><td>13</td><td>18</td><td>1.1</td><td>42</td><td>56</td><td>-14</td><td>51.9</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>35.5</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>23</td><td>Oxford United</td><td>44</td><td>42</td><td>10</td><td>14</td><td>18</td><td>1.1</td><td>41</td><td>54</td><td>-13</td><td>49.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>72.5</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>24</td><td>Sheffield Weds</td><td>14</td><td>42</td><td>1</td><td>11</td><td>30</td><td>0.3</td><td>25</td><td>82</td><td>-57</td><td>19.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>100.0</td></tr></tbody>
-    </table>
+    <div class="table-scroll">
+        <table class="league-table">
+            <thead><tr><th>Pos</th><th>Team</th><th>Pts</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>Pts/MP</th><th>GF</th><th>GA</th><th>GD</th><th>Simulation Mean Pts</th><th>P_Top2</th><th>P_Playoff</th><th>P_PO_Final</th><th>P_PO_Promotion</th><th>P_Promotion (Overall)</th><th>P_Relegation</th></tr></thead>
+            <tbody><tr style='background-color: #70AD47; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>1</td><td>Coventry City</td><td>85</td><td>42</td><td>25</td><td>10</td><td>7</td><td>2.0</td><td>84</td><td>42</td><td>42</td><td>90.8</td><td>100.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>100.0</td><td>0.0</td></tr><tr style='background-color: #70AD47; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>2</td><td>Ipswich Town</td><td>75</td><td>41</td><td>21</td><td>12</td><td>8</td><td>1.8</td><td>71</td><td>42</td><td>29</td><td>81.7</td><td>72.1</td><td>27.9</td><td>18.6</td><td>11.6</td><td>83.7</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>3</td><td>Millwall</td><td>73</td><td>42</td><td>21</td><td>10</td><td>11</td><td>1.7</td><td>56</td><td>47</td><td>9</td><td>78.6</td><td>11.7</td><td>88.0</td><td>39.5</td><td>17.9</td><td>29.6</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>4</td><td>Southampton</td><td>72</td><td>42</td><td>20</td><td>12</td><td>10</td><td>1.7</td><td>73</td><td>50</td><td>23</td><td>77.6</td><td>10.1</td><td>89.5</td><td>52.4</td><td>29.0</td><td>39.1</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>5</td><td>Middlesbrough</td><td>72</td><td>42</td><td>20</td><td>12</td><td>10</td><td>1.7</td><td>62</td><td>42</td><td>20</td><td>76.9</td><td>5.8</td><td>93.0</td><td>51.6</td><td>26.5</td><td>32.3</td><td>0.0</td></tr><tr style='background-color: #B7D6A3; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>6</td><td>Hull City</td><td>68</td><td>42</td><td>20</td><td>8</td><td>14</td><td>1.6</td><td>64</td><td>60</td><td>4</td><td>74.0</td><td>0.3</td><td>82.8</td><td>30.5</td><td>12.0</td><td>12.3</td><td>0.0</td></tr><tr style='background-color: #DBEAD1; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>7</td><td>Wrexham</td><td>64</td><td>42</td><td>17</td><td>13</td><td>12</td><td>1.5</td><td>63</td><td>60</td><td>3</td><td>69.3</td><td>0.0</td><td>11.0</td><td>4.2</td><td>1.6</td><td>1.6</td><td>0.0</td></tr><tr style='background-color: #DBEAD1; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>8</td><td>Derby County</td><td>63</td><td>42</td><td>18</td><td>9</td><td>15</td><td>1.5</td><td>61</td><td>53</td><td>8</td><td>68.6</td><td>0.0</td><td>7.6</td><td>3.1</td><td>1.4</td><td>1.4</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>9</td><td>Norwich City</td><td>58</td><td>42</td><td>17</td><td>7</td><td>18</td><td>1.4</td><td>55</td><td>50</td><td>5</td><td>63.2</td><td>0.0</td><td>0.1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>10</td><td>Bristol City</td><td>58</td><td>42</td><td>16</td><td>10</td><td>16</td><td>1.4</td><td>52</td><td>51</td><td>1</td><td>63.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>11</td><td>QPR</td><td>58</td><td>42</td><td>16</td><td>10</td><td>16</td><td>1.4</td><td>58</td><td>63</td><td>-5</td><td>63.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>12</td><td>Watford</td><td>57</td><td>42</td><td>14</td><td>15</td><td>13</td><td>1.4</td><td>52</td><td>51</td><td>1</td><td>62.1</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>13</td><td>Preston North End</td><td>57</td><td>42</td><td>14</td><td>15</td><td>13</td><td>1.4</td><td>50</td><td>53</td><td>-3</td><td>61.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>14</td><td>Swansea City</td><td>57</td><td>42</td><td>16</td><td>9</td><td>17</td><td>1.4</td><td>50</td><td>54</td><td>-4</td><td>62.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>15</td><td>Birmingham City</td><td>56</td><td>42</td><td>15</td><td>11</td><td>16</td><td>1.3</td><td>51</td><td>52</td><td>-1</td><td>61.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>16</td><td>Stoke City</td><td>55</td><td>42</td><td>15</td><td>10</td><td>17</td><td>1.3</td><td>49</td><td>46</td><td>3</td><td>60.9</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: white; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>17</td><td>Sheffield United</td><td>54</td><td>42</td><td>16</td><td>6</td><td>20</td><td>1.3</td><td>59</td><td>59</td><td>0</td><td>59.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>18</td><td>Charlton Athletic</td><td>49</td><td>42</td><td>12</td><td>13</td><td>17</td><td>1.2</td><td>39</td><td>51</td><td>-12</td><td>54.5</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>7.6</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>19</td><td>Portsmouth</td><td>48</td><td>42</td><td>12</td><td>12</td><td>18</td><td>1.1</td><td>43</td><td>57</td><td>-14</td><td>54.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>14.3</td></tr><tr style='background-color: #F6BE98; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>20</td><td>Blackburn Rovers</td><td>48</td><td>43</td><td>12</td><td>12</td><td>19</td><td>1.1</td><td>38</td><td>53</td><td>-15</td><td>51.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>41.8</td></tr><tr style='background-color: #F6BE98; border-bottom: 3px solid #333;'><td style='font-weight: bold;'>21</td><td>Leicester City</td><td>47</td><td>42</td><td>11</td><td>14</td><td>17</td><td>1.1</td><td>54</td><td>64</td><td>-10</td><td>52.2</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>28.3</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>22</td><td>West Brom</td><td>46</td><td>42</td><td>11</td><td>13</td><td>18</td><td>1.1</td><td>42</td><td>56</td><td>-14</td><td>51.9</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>35.5</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>23</td><td>Oxford United</td><td>44</td><td>42</td><td>10</td><td>14</td><td>18</td><td>1.1</td><td>41</td><td>54</td><td>-13</td><td>49.4</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>72.5</td></tr><tr style='background-color: #ED7D31; border-bottom: 1px solid #ddd;'><td style='font-weight: bold;'>24</td><td>Sheffield Weds</td><td>14</td><td>42</td><td>1</td><td>11</td><td>30</td><td>0.3</td><td>25</td><td>82</td><td>-57</td><td>19.8</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>100.0</td></tr></tbody>
+        </table>
+    </div>
     
         <hr>
         <h1>High Impact Matchups</h1>
